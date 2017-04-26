@@ -92,16 +92,22 @@ LaTeX Font Warning: Font shape `T1/Type1/bx/n' undefined
 (Font)              using `T1/Type1/m/n' instead on input line 3.
 
 
-LaTeX Font Warning: Font shape `OMS/Type1/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 8.
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
 
 LaTeX Font Warning: Font shape `T1/Type1/m/sc' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 14.
+(Font)              using `T1/Type1/m/n' instead on input line 9.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+
+LaTeX Font Warning: Font shape `OMS/Type1/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 25.
 
 (./images/sbnd_stats_table.tex [1])
 <images/LArTPC.pdf, id=25, 776.9025pt x 444.66125pt> <use images/LArTPC.pdf>
@@ -138,5 +144,5 @@ r/jknappen/ec/ecrm2074.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb
 ></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (11 pages, 230929 bytes).
+Output written on main.pdf (11 pages, 232222 bytes).
 Transcript written on main.log.
