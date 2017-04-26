@@ -1,0 +1,785 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MPhys Report
+% Semester 2
+% 
+% Started on 04/05/16
+% Author: Rhiannon Jones
+% 4th Year MPhys Sem2
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+% Downloads the required packages for certain features
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}         % Palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+\renewcommand*\rmdefault{Type1}
+\usepackage{ulem}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{courier}
+\bibliographystyle{unsrt}
+\usepackage[sc]{mathpazo} 
+\usepackage{multicol}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.2} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[compat=1.1.0]{tikz-feynman}
+% Use the ’standalone’ package:
+\usepackage{standalone}
+% Load all packages needed for all sub−files:
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{purpleX}{rgb}{0.573,0,1}
+\definecolor{greenX}{rgb}{0.349,0.831,0.329}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=25mm,
+ right=25mm,
+ top=30mm,
+ bottom=30mm,
+ }% Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{gray}}
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\LARGE\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\itshape} % Set the abstract itself to italic text
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}[block]{\LARGE\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\Large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+%----------------------------------------------------------------------------------------
+%	DEFINING NEW COMMANDS
+%----------------------------------------------------------------------------------------
+\newcommand*\nnbar[0]{n-\bar{n}}
+\newcommand*\intArg[4]{\int_{#1}^{#2}\left(#3\right)\mbox{  }d#4}
+\tikzfeynmanset{
+every blob={draw=purple!40!black, pattern color=purple!40!black},
+}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-10mm}\fontsize{20pt}{12pt}\selectfont\textbf{Investigating DUNE's sensitivity to bound neutron-antineutron oscillations}} % Article title
+
+\author{
+\large Rhiannon Jones\\
+\textit{8400312}\\ 
+\normalsize University of Manchester \\
+\normalsize School of Physics and Astronomy \\ % Institution
+\normalsize MPhys research project \\
+\normalsize Final report \\ 
+\small In collaboration with Andrew Smith\\
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle % Insert title
+\vspace{20mm}
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\begin{abstract}
+\noindent This investigation aimed to determine the sensitivity of the proposed liquid argon time projection chamber (LArTPC) experiment, DUNE, to bound neutron - anti-neutron (\(\nnbar\)) oscillations: A rare baryon number violating process.\\
+At this stage, an \(\nnbar\) selection algorithm has been constructed and performs with an efficiency of \(93.3\%\), a purity of \(86.4\%\) and eliminates \(80.4\%\) of atmospheric \(\nu\) background events.\\
+The first constituent of the analysis was a \(\pi^0\) reconstruction algorithm which was successfully implemented with an efficiency of \(87.2\%\) and a purity \(91.0\%\). Primary particles were then grouped into candidate primary vertices and this was done correctly \(99.6\%\) of the time. The reconstructed \(\pi^0\)s were then added to these vertices before plotting their energy and particle composition distributions. The vertex distributions of simulated atmospheric background events were then compared with those of the \(\nnbar\) events to quantify the overall effectiveness of the algorithms.\\
+\end{abstract}
+\newpage
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+\pagenumbering{arabic}
+\section{Introduction}
+\label{sec:intro}
+
+The nature of the early Universe still holds many mysteries, though particle physicists and cosmologists have together constructed many theories which could help unravel them. One such conundrum is baryogenesis: The hypothesised process through which the Universe has come to be matter dominated. Since matter and antimatter annihilate, the only way for the Universe to exist in either form is if at some instance there was an asymmetry between them. Andrei Sakharov produced a set of restrictions on any possible solutions to this problem in 1967 whereby he suggested that if the Universe had at some point been out of thermal equilibrium and processes which violated charge (\(C\)), charge-parity (\(CP\)) and baryon number (\(B\)) had occurred, it would be possible for this asymmetry between matter and antimatter to arise \cite{sak}. Since the proposal of these Standard Model (SM) breaking Sakharov conditions, we have discovered that neutrinos have mass which indicates that another symmetry, \((B-L)\),  must have also been broken \cite{nnbarOsc}.\\
+
+In order to determine if these properties were violated, it is necessary to hypothesise and investigate a process which goes Beyond the Standard Model (BSM). Baryogenesis could be explained if we were to observe the oscillation of baryonic matter via the mixing of a quark to its antiparticle. This process would also indicate that the matter which makes up our Universe is less stable than we think. \(\nnbar\) oscillations are an entirely theorised, BSM process which would violate \(B\) and \((B-L)\) by \(\Delta B = \Delta (B-L) = 2\) and would therefore help deepen our understanding of the BSM processes which could provide this explanation \cite{nnbarTheory}.\\
+
+BSM processes such as \(\nnbar\) oscillations are extremely rare. The Super Kamiokande collaboration proposed an estimated lower-limit on the lifetime of a neutron to be \(\sim 10^{32}\) years \cite{superK}. (Please note: This lifetime is not a fixed value and is used only for the purpose of making event rate estimates.) In order to conquer this issue, neutrino detectors with capacities in the tens of kilotonnes will be used to try and observe the oscillations, since they could potentially reduce the necessary exposure time to a matter of months.\\
+
+Long and short baseline experiments have been setup across the world in order to investigate the nature of neutrinos. Liquid argon is one of the leading detector materials since its high resolution provides outstanding signal distinction \cite{LArProperties}. Equation~(\ref{eq:nuAr}) describes the interaction which occurs between an argon nucleus and and electron neutrino \cite{GLoBES}.
+
+\begin{equation}\label{eq:nuAr}
+ \nu_e + ^{40}\mbox{Ar} \rightarrow e^- + ^{40}\mbox{K}^*
+\end{equation}
+
+There are already a handful of LArTPC experiments, such as MicroBooNE, which are up and running, however these are not on a scale large enough to detect an event as rare as the \(\nnbar\) oscillation. That being said, these detectors can be used to test reconstruction algorithms on events with similar topologies such as low-energy cosmogenic \(\bar{p}\) or \(\bar{n}\) annihilation on argon nuclei. In both cases, the low-energy antimatter will annihilate with its nearby matter component within the argon nucleus. \\
+
+This research project aims to use Monte Carlo simulations of cosmogenic antimatter and \(\nnbar\) oscillation events to aid in the formulation of event reconstruction algorithms. These simulations provide particle samples in both the reconstructed form, which mimics exactly how the event would occur in the detector, and in the truth form, which contains exact information at a raw level. A comparison between the sample types would be used to calculate the efficiency and purity of the reconstruction algorithms with the overall intention of obtaining an estimate of DUNE's sensitivity to bound neutron-antineutron oscillations. \\
+
+\clearpage
+%---------------------------------------------------------------------------------------------------------------
+\section{The LArTPC configuration}
+\label{sec:uboone}
+
+A liquid argon time projection chamber (LArTPC) utilises the dense nature and low cost of liquid argon by housing large fiducial volumes of it in a cuboid-shaped vessel \cite{uBooNETech}. A diagram of the structure of a general TPC is shown in Figure~\ref{fig:uBooNE}, in summary  \cite{uBoone}: 
+\begin{itemize}
+    \item A potential difference between then cathode and anode planes produce an electric field across the whole structure
+    \begin{itemize}
+        \item This field causes the negatively charged electrons to drift away from the cathode
+    \end{itemize}
+    \item On the opposite wall, there are 3 wire planes (U,V,Y) oriented at 60\(^o\)s to one another
+    \begin{itemize}
+        \item These wires log the electron's position and energy in the y-z planes
+        \item A time projection of the drift electrons is used to obtain x-axis information
+        \item Interaction vertices can be determined from this data
+    \end{itemize}
+    \item Behind the wire planes lies an array of photomultiplier tubes (PMTs)
+    \begin{itemize}
+        \item Incoming photons are analysed here 
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=1.1]{LArTPC.pdf}
+    \caption{The LArTPC is visualised here, it can be seen that the 3 wire planes (usually labelled U, V and Y) lie on the same wall as the PMTs and are on the opposite wall to the cathode plane. An example track is shown along with the resulting ionization electrons and their drift direction. In this Figure, the x axis is positive in the electron drift direction.}
+    \label{fig:uBooNE}
+\end{figure}
+
+When a neutrino interacts with the argon nuclei in the TPC, electrons are produced in accordance with the interaction in~\ref{eq:nuAr} and it is likely that they will undergo further interactions such as scattering and the emission of a photon off another argon nucleus. Eventually, any emitted photons will likely undergo pair production and subsequently cascade into an EM shower. Electrons or positrons in this shower may ionize the argon and the cathode causes the ionization electrons to drift across the TPC volume. Upon reaching the wire planes at a known position and with a calculable energy, the electron can be analysed to extract properties such as the energy and position of the ionization vertex. Similarly, photons can be analysed if they are picked up by any one of the PMTs. Track and shower objects are built up by locating all of the ionization electrons in an event. The electrons surrounding the track in Figure~\ref{fig:uBooNE} give an idea of how this is done \cite{uBoone}.\\
+
+A Feynmann diagram of the process described by equation~(\ref{eq:nuAr}) is given in Figure~\ref{fig:FeynAr}. An example of how pair production may occur in the TPC is given by Figure~\ref{fig:PairProd}.
+
+\begin{figure}[htb!]
+    \begin{center}
+        \begin{tikzpicture}
+          \begin{feynman}
+            \vertex (a1) {\(\nu_e\)};
+            \vertex[below=1.5em of a1] (a2);
+            \vertex[right=2.5cm of a2] (a3);
+            \vertex[right=5cm of a1] (a4) {\(e^-\)};
+        
+            \vertex[below=6em of a1] (b1) {\(d\)};
+            \vertex[above=1.5em of b1] (b2);
+            \vertex[right=2.5cm of b2] (b3);
+            \vertex[right=5cm of b1] (b4) {\(u\)};
+            
+            \vertex[below=1.5em of b1] (c1) {\(u\)};
+            \vertex[right=5cm of c1] (c2) {\(u\)};
+            
+            \vertex[below=1.5em of c1] (d1) {\(d\)};
+            \vertex[right=5cm of d1] (d2) {\(d\)};
+        
+            \diagram* {
+              {[edges=fermion]
+                (c1) -- (c2),
+                (d1) -- (d2),
+              },
+                (a1) -- [fermion] (a3) -- [fermion] (a4),
+                (a3) -- [scalar, edge label=\(W^-\)] (b3),
+                (b1) -- [fermion] (b3) -- [fermion] (b4),
+            };
+        
+            \draw [decoration={brace}, decorate] (d1.south west) -- (b1.north west)
+                  node [pos=0.5, left] {\(n\)};
+            \draw [decoration={brace}, decorate] (b4.north east) -- (d2.south east)
+                  node [pos=0.5, right] {\(p\)};
+          \end{feynman}
+        \end{tikzpicture}
+        \caption{When a \(\nu_{\mbox{\footnotesize e}}\) enters the TPC and interacts with the LAr, an electron is produced alongside the excited state of the argon atom, with photons being emitted to account for the energy loss and eventual de-excitation of the \(^{40}K^*\) nucleus.}
+        \label{fig:FeynAr}
+    \end{center}
+\end{figure}
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[scale=0.8]{pairProduction.pdf}
+\caption{An electron which interacts with a nucleus producing a photon as it is scattered, pair production then occurs during which a photon becomes an \(e^+e^-\) pair, the initial electron continues before potentially scattering again. At any point during the shower, \(e^+\)s or \(e^-\)s may ionize the argon and send drift electrons to the TPC.}
+\label{fig:PairProd}
+\end{figure}
+
+In detectors such as MicroBooNE and DUNE, neutrinos will be produced by beams made at long and short baselines from the detector locations. MicroBooNE is a \(\sim\)60 tonne LArTPC and DUNE will contain \(\sim\)40 kilotonnes of liquid argon. Although the beam-lines will be the primary particle sources for each experiment, many other particle interactions may occur within the active volumes of the TPCs. For instance, MicroBooNE resides above the Earth, leaving it exposed to both atmospheric neutrinos and cosmogenic particles. In contrast, DUNE will be built underground so that the overburden of the Earth can shield the TPC from cosmic rays, though atmospheric neutrinos will still reach the detector. These particles and their interactions within the TPC will cause issues when it comes to event reconstruction. The first event seen by the MicroBooNE is given in Figure~\ref{fig:event} \cite{FermiToday} to give an idea of what is seen in an LArTPC.\\
+
+Prior to the construction of LArTPC experiments, searches for \(\nnbar\) oscillations have been undertaken all over the world. For the most part, the lack of success in these previous attempts has been put down to the heavy overlay of atmospheric neutrino backgrounds. The resolution of these liquid argon-based experiments promises to dramatically reduce these effects, and therefore provide the greatest chance of successfully observing them \cite{nnbarPaper}. 
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[width=\textwidth]{uBooNEevent.pdf}
+\caption{The first event seen by MicroBooNE in October 2015. The various lines are particle tracks in the event.}
+\label{fig:event}
+\end{figure}
+
+\clearpage
+%---------------------------------------------------------------------------------------------------------------
+\section{Neutral particle oscillations}
+\label{sec:oscNeutral}
+Realising the existence of neutral particle oscillations has and will help confirm both SM and Beyond the Standard Model (BSM) theories. For instance, the discovery and observation of \(\mbox{B}^0 - \bar{\mbox{B}}^0\) oscillations contributed to the first explanation of matter-antimatter dominance in the current Universe \cite{B0B0bar}.\\
+Oscillations occur when quark-constituents of particles change flavour via the weak interaction, they are allowed by the standard model provided they mix within the bounds of the 3D rotation CKM matrix:
+
+\begin{equation}
+    \left(\begin{matrix}
+            d' \\
+            s' \\
+            b' \end{matrix} \right)
+            = \left( \begin{matrix}
+                    V_{ud} & V_{us} & V_{ub} \\
+                    V_{cd} & V_{cs} & V_{cb} \\
+                    V_{td} & V_{ts} & V_{tb} \end{matrix} \right) 
+                    \left( \begin{matrix} 
+                            d \\
+                            s \\
+                            b \end{matrix} \right)
+\end{equation}
+
+Where d', s' and t' are the mass eigenstates of the down-type quarks and d, s and t are the flavour eigenstates of the down-type quarks. The elements \(\mbox{V}_{ij}\) (i = u,c,t; j = d,s,b) of the 3D matrix are the mixing amplitudes of the interaction vertices. The labels show that it is only possible for an up-type quark to mix to a down-type quark and vice versa, it is also true that matter and antimatter cannot interchange \cite{MarkyBabes}.\\
+
+The Feynman diagram of the \(\mbox{B}^0 - \bar{\mbox{B}}^0\) oscillations is given in Figure~\ref{fig:B0B0bar} and the vertices involved show that this oscillation is allowed within the standard model. The hint towards an explanation of the Universe's matter dominance has fuelled the motivation for studies into processes, such as \(\nnbar\) oscillations, which would not occur within the Standard Model, since it is these which would give definitive evidence for the asymmetry.\\
+
+\begin{figure}[htb!]
+\begin{center}
+    \begin{tikzpicture}
+      \begin{feynman}
+        \vertex (a1) {\(\overline b\)};
+        \vertex[right=2.5cm of a1] (a2);
+        \vertex[right=2.5cm of a2] (a3);
+        \vertex[right=2.5cm of a3] (a4) {\(\overline d\)};
+        
+        \vertex[below=4em of a1] (b1) {\(d\)};
+        \vertex[right=2.5cm of b1] (b2);
+        \vertex[right=2.5cm of b2] (b3);
+        \vertex[right=2.5cm of b3] (b4) {\(b\)};
+    
+        \diagram* {
+          {[edges=fermion]
+            (b1) -- (b2) -- (a2) -- (a1),
+            (a4) -- (a3) -- (b3) -- (b4),
+          },
+          (a2) -- [scalar, edge label=\(W^+\)] (a3),
+          (b2) -- [scalar, edge label'=\(W^-\)] (b3),
+          (b2) -- [fermion, edge label=\(t\)](a2), 
+          (a3) -- [fermion, edge label=\(t\)](b3),
+        };
+    
+        \draw [decoration={brace}, decorate] (b1.south west) -- (a1.north west)
+              node [pos=0.5, left] {\(B^{0}\)};
+        \draw [decoration={brace}, decorate] (a4.north east) -- (b4.south east)
+              node [pos=0.5, right] {\(\bar{B}^0\)};
+      \end{feynman}
+    \end{tikzpicture}
+    \caption{The Feynman diagram of the \(\mbox{B}^0-\bar{\mbox{B}}^0\) process. It can be seen that the vertices involved are the \( V_{td}\) and \( V_{tb}\) vertices which means this oscillation is allowed in the Standard Model.}
+    \label{fig:B0B0bar}
+\end{center}
+\end{figure}
+
+\(\nnbar\) oscillations have not yet been observed since the process would involve the mixing shown in Figure~\ref{fig:nnbarOsc} which is not explained by the CKM matrix elements and therefore requires as-yet-unknown BSM phenomena.
+
+\clearpage
+%---------------------------------------------------------------------------------------------------------------
+\section{Bound \(\nnbar\) oscillations and background signals}
+\label{sec:oscBound}
+A bound \(\nnbar\) oscillation takes place within the nucleus of an atom. Although the process would be heavily suppressed by nuclear effects such as binding energy \cite{nnbarPaper}, it is theoretically possible for a neutron to oscillate into an antineutron in the nucleus of an argon atom in an LArTPC. The visual resolution of the electronic readout in an LArTPC is on the same scale as a cloud projection chamber, it therefore provides an excellent opportunity to see the topologies of such rare interactions whilst minimising possible misconceptions \cite{resolution}. It is when the antineutron annihilates with another nearby bound nucleon that final state particles are released, and this is what we see in the detector. The topology and kinematics of this event will be discussed in section~\ref{sec:nnbarObs}.\\
+
+\begin{figure}[htb!]
+\begin{center}
+    \begin{tikzpicture}
+        \begin{feynman}
+            \vertex (a1) {\(u\)};
+            \vertex[right=2.5cm of a1] (a2);
+            \vertex[right=1.5cm of a2] (a3);
+            \vertex[right=2.5cm of a3] (a4) {\(\overline u\)};
+        
+            \vertex[below=1.5em of a1] (b1) {\(d\)};
+            \vertex[right=2.5cm of b1] (b2);
+            \vertex[right=1.5cm of b2] (b3);
+            \vertex[right=2.5cm of b3] (b4) {\(\overline d\)};
+            
+            \vertex[below=1.5em of b1] (c1) {\(d\)};
+            \vertex[right=2.5cm of c1] (c2);
+            \vertex[right=1.5cm of c2] (c3);
+            \vertex[right=2.5cm of c3] (c4) {\(\overline d\)};
+        
+            \diagram* {
+              {[edges=fermion]
+                (a1) -- (a2),
+                (b1) -- (b2),
+                (c1) -- (c2),
+                (a4) -- (a3),
+                (b4) -- (b3),
+                (c4) -- (c3)
+              },
+              (a3) -- [scalar] (a2),
+              (c2) -- [scalar] (c3),
+              (a2) -- [scalar] (c2),
+              (c3) -- [scalar] (a3),
+            };
+        
+            \draw [decoration={brace}, decorate] (c1.south west) -- (a1.north west)
+                  node [pos=0.5, left] {\(n\)};
+            \draw [decoration={brace}, decorate] (a4.north east) -- (c4.south east)
+                  node [pos=0.5, right] {\(\bar{n}\)};
+        \end{feynman}
+    \end{tikzpicture}
+    \caption{An \(\nnbar\) Feynman diagram has not yet been established, since the oscillation involves the mixing between a particle and its own antiparticle. The boxed area in the centre identifies the unknown region of the interaction.}
+    \label{fig:nnbarOsc}
+\end{center}
+\end{figure}
+
+The primary physics goals of LArTPCs mostly include studying various aspects of the nature and behaviour of neutrinos. For instance, MicroBooNE aims to produce the first data on argon-neutrino cross sections in the 1 GeV energy range \cite{uBooNEPhysics}.\\
+
+It is these neutrino-argon interactions which will provide the largest backgrounds to the \(\nnbar\) oscillation events we wish to observe. MicroBooNE uses a beam to produce neutrinos, whose directionality is along the beamline and will therefore not be misconstrued as an \(\nnbar\) interaction. However, high-energy atmospheric neutrinos may undergo charged-current (CC) interactions with argon in the TPC in which the neutrino will be absorbed, releasing an electron and leaving an unstable, excited-state potassium atom in its place. It is possible for the unstable atom to then eject pionic matter in a similar way to that of an antineutron annihilation with another nucleon. Figure~\ref{fig:FeynAr} is the Feynman diagram of the charged current interaction between the atmospheric neutrinos and the liquid argon.\\
+
+Since the detector's main intentions are to observe and analyse neutrino interactions, the atmospheric background events will be extremely abundant and subsequently increase the difficulty of correctly reconstructing the oscillation events. If it is possible to produce effective reconstruction algorithms based on simulated events and obtain an estimate on the sensitivity of future experiments to the \(\nnbar\) oscillations, it will mean they can be implemented as soon as the detector is up and running, and therefore maximise the possible data acquisition during the exposure \cite{MarkyBabes}.
+\clearpage
+
+%---------------------------------------------------------------------------------------------------------------
+\section{\(\nnbar\) oscillations in the detector}
+\label{sec:nnbarObs}
+
+Due to the rarity of any BSM interactions, maximising the chance of observing them is primarily done by increasing the volume of the detector in which we look for them. It is possible to calculate the expected rate of their occurrence using the detector geometries and an estimate on the oscillation lifetime. Using equation~(\ref{eq:Numbernucleons}) \cite{nDensity} and the following quantities, the number of neutrons in the MicroBooNE and DUNE TPCs can be calculated.\\
+
+\(V_{\mbox{\footnotesize DUNE}} = 40,000 \mbox{m}^3 \mbox{ and } V_{\mu \mbox{\footnotesize BooNE}} = 62 \mbox{m}^3\) are the volumes of argon, \(N_A = 6.022\times 10^{23}\)(mol\(^{-1}\)) is Avogadro's number, \(\rho = 1400 \mbox{kg}\mbox{m}^{-3}\) is the density of LAr and \(M = 0.03995\) kgmol\(^{-1}\) is the molecular mass of argon.
+
+\begin{equation}
+    \label{eq:NumberNeutrons}
+    N = 22V\frac{N_A}{M}\rho
+\end{equation}
+
+This gives the number of neutrons to be on the order of \( N_{\mbox{\footnotesize DUNE}} \sim 10^{34}\) and \( N_{\mu \mbox{\footnotesize BooNE}} \sim 10^{31}\). Given the (estimated, and variable) lifetime \(\tau_{\nnbar} \sim 10^{32}\) years calculated using bubble chamber data by Super-K \cite{superK}, theoretically, an \(\nnbar\) oscillation will occur once every \(\sim\)10 years in MicroBooNE. This number makes it implausible to expect to observe any such event during the run-time of the experiment and we therefore look to the large-scale detectors like DUNE with higher hopes of observing one. Using the same calculation, a more promising estimated rate of 100 per year justifies further investigation into sensitivity calculations of the detector to such events. \\
+
+These investigations begin by determining the likely final state products and how they would appear in the detector; getting this theory correct is crucial in distinguishing real events from backgrounds. For an \(\nnbar\) oscillation, the visible particles will be those which are produced in the annihilation of the \(\bar{n}\) with a surrounding \(n\) within the nucleus. \\
+
+The LArTPC is able to see particles in two different forms:
+\begin{multicols}{2}
+    \underline{Tracks}\\
+    A track is the visual path left by any charged particle between its production location and its subsequent interaction or decay positions. The events visualised by an LArTPC also colour the tracks based on the particle's energy.
+    
+    \columnbreak
+    
+    \underline{Showers}\\
+    A shower is produced when an electron or photon undergoes pair-production. This will appear as a cone-like bunch of tiny tracks left by the electrons and positrons in the pair-production chain. 
+\end{multicols}
+
+Other than photons, neutral particles do not leave tracks or showers in the detector, though it is possible to reconstruct these particles from their decay products. The particles ejected from the unstable nucleus after the \(\nnbar\) annihilations occur would be mostly pionic. Table~\ref{tab:BranchNuc} gives the branching ratios of the annihilation events which confirm this \cite{PDG} \cite{superK}. The frequency of the \(\pi^0\) occurrence as a final state particle meant it was extremely important for them to be reconstructed. The branching ratios of a \(\pi^0\) decay, given in Table~\ref{tab:BranchPi0}, determined that this would be done using the \(\pi \rightarrow \gamma \gamma\) decay mode.\\
+
+\begin{table}[htb!]
+    \begin{center}
+        \begin{tabular}{ c c | c c }
+         \hline\hline
+         \multicolumn{2}{c |}{$\bar{n} + p$} & 
+         \multicolumn{2}{c}{$\bar{n} + n$}\\
+         \hline
+         \(\pi^+\pi^0\)         & 1\%   & \(\pi^+\pi^-\)         & 2\% \\
+         \(\pi^+2\pi^0\)        & 8\%   & \(2\pi^0\)             & 1.5\% \\
+         \(\pi^+3\pi^0\)        & 10\%  & \(\pi^+\pi^-\pi^0\)    & 6.5\% \\
+         \(2\pi^+\pi^-\pi^0\)   & 22\%  & \(\pi^+\pi^-2\pi^0\)   & 11\% \\
+         \(2\pi^+\pi^-2\pi^0\)  & 36\%  & \(\pi^+\pi^-3\pi^0\)   & 28\% \\
+         \(2\pi^+\pi^-2\omega\) & 16\%  & \(2\pi^+2\pi^-\)       & 7\% \\
+         \(3\pi^+2\pi^-\pi^0\)  & 7\%   & \(2\pi^+2\pi^-\pi^0\)  & 24\% \\
+                                &       & \(\pi^+\pi^-\omega\)   & 10\% \\
+                                &       & \(2\pi^+2\pi^-2\pi^0\) & 10\% \\
+         \hline\hline
+        \end{tabular}
+    \caption{A table of branching ratios of \(\bar{n}\) annihilation on nuclei calculated by Super Kamiokande using bubble chamber data \cite{superK}\cite{bubChamb}.}
+    \label{tab:BranchNuc}
+    \end{center}
+\end{table}
+
+\begin{table}[htb!]
+    \begin{center}
+        \begin{tabular}{ c c }
+             \hline\hline
+             \multicolumn{2}{c}{\(\pi^0\) decay mode branching ratios}\\
+             \hline
+             \(2\gamma\)      & 99\%\\
+             \(e^+e^-\gamma\) & 1\%\\
+             \hline\hline
+        \end{tabular}
+        \caption{The branching ratios of \(\pi^0\) decay}
+        \label{tab:BranchPi0}
+    \end{center}
+\end{table}
+
+When an \(\nnbar\) oscillation occurs within the nucleus, the \(\bar{n}\) would be almost at rest. The energy released in the oscillation, and subsequently available to transfer to the annihilation products, would therefore be on the order of magnitude of the mass of the \(\nnbar\) system \(E \approx 2M_{\nnbar} \approx 1877\) MeV. By once again considering the kinematics, the only momentum contribution to the event will be around the Fermi momentum of the \(\nnbar\) system \(p_{\mbox{\footnotesize F}} \approx 400\) MeV/c \cite{fermiMom}.\\
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale = 0.5]{nnbarCartoon}
+    \put(-112,-7){$\pi^+$}
+    \put(-45,90){$\pi^+$}
+    \put(-132,88){$\pi^-$}
+    \put(-80,46){$\pi^0$}
+    \put(-8,0){$\gamma$}
+    \put(0,40){$\gamma$}
+    \caption{The star-like topology of the particles expelled from an unstable nucleus}
+    \label{fig:star}
+\end{figure}
+
+Since the event occurs almost at rest, the particles ejected from the nucleus will travel out of the vertex in a star-like formation. A cartoon of this for the particles which would likely be emitted immediately is shown in Figure~\ref{fig:star}.
+
+%---------------------------------------------------------------------------------------------------------------
+\section{Cosmogenic events}
+\label{sec:cosmics}
+
+As discussed in section~\ref{sec:nnbarObs}, the MicroBooNE TPC will not hold enough neutrons to observe a bound \(\nnbar\) oscillation. That being said, there exists a process which would theoretically result in the same event topology in an LArTPC.\\
+
+When protons from anywhere in the Universe reach the atmosphere they interact with other atmospheric particles. These interactions result in the emission of various particle types, two of which may be \(\bar{p}\)s or \(\bar{n}\)s. If these antimatter particles enter the TPC with extremely low momenta, their annihilation with the respective nucleons will similarly result in an unstable nucleus, which will break up to produce the same final states as those from the \(\nnbar\) annihilation after an oscillation occurs. \\
+
+It is therefore possible to test any reconstruction algorithms on real data from MicroBooNE by looking for these events instead of \(\nnbar\) oscillations, whilst being confident that they will sufficiently assess the efficiency of the algorithms. These efficiencies could then be applied to relevant sensitivity calculations.\\
+
+It may seem logical to assume these events would therefore be a significant background to any possible \(\nnbar\) oscillations present in DUNE, this is where the overburden of the Earth proves to be a significant asset to the design of DUNE. The cosmogenic particles will be shielded from the TPC and therefore the only background it is necessary to focus on are the atmospheric neutrinos mentioned in section~\ref{sec:oscBound}.\\
+
+
+\clearpage
+%---------------------------------------------------------------------------------------------------------------
+\section{Event simulation}
+\label{sec:evSim}
+
+Due to the lack of real data available, simulated event data was used throughout the project. Any desired event topology can be accurately simulated by software suites such as GENIE, which generate an initial data sample using Monte Carlo simulations \cite{GENIE}. From here, there exist processing chains which proceed to simulate various elements of how the particles would interact after their production. Software packages like GENIE utilise theoretical information such as branching ratios to accurately predict the distributions of final state particles. The branching ratios of the \(\nnbar\) final states were calculated by Super Kamiokande using bubble chamber data and are given in Table~\ref{tab:BranchNuc} \cite{bubChamb}.\\
+
+For the purpose of this investigation, the software packages LArSoft and LArLite were used to compose \(\nnbar\) event reconstruction algorithms. The Monte Carlo samples of \(\nnbar\) events were generated to have occurred within the detector volume, since we are interested in studying the oscillations when bound within a nucleus. After only the event generation (GENIE) stage, we have `truth-level' information about the particles: Raw data such as PDG codes and a particle's ancestry alongside the `true' track and shower properties. Although this information would not be available in real data, it is extremely useful to use when determining the efficiency of a reconstruction algorithm.\\
+
+Within LArSoft, one processing chain begins by running the sample through GEANT-4 to simulate the particle's interactions within the LArTPC \cite{G4}, the detsim stage of the processing chain then simulates any likely detector effects. Together, these produce 'perfect-reconstruction' level information about the tracks and showers left by particles whilst they exist in the TPC. Perfect reconstruction calculates track and shower properties, such as start position and energy, in the same way normal reconstruction would be performed: by tracing back the ionisation energy deposits left at the wire planes. This gives the information which would be available to us in the real data, without considering any reconstruction issues that may occur in real life, hence the term 'perfect'. Perfect reconstruction is used to model the events when testing the reconstruction algorithms.\\
+
+For the cosmic events, a package called CORSIKA propagates cosmic-ray protons through the Earth's atmosphere and models their interactions \cite{CORSIKA}. Any interaction products that reach the TPC will then also be run through the GEANT-4 and detsim stages of reconstruction.
+
+\newpage
+%------------------------------------------------
+\section{\(\nnbar\) reconstruction} 
+\label{sec:nnbarReco}
+
+\subsection{At the truth-level}
+\label{sec:nnbarTruth}
+
+Although this event generation process accurately simulates how the particles interact in and with the detector, there are other considerations which need to be taken into account. When plotting the truth-level energy distribution of an \(\nnbar\) event vertex, the naive outcome would be a delta-peak at \(E = 2M_n\) due to the low momentum kinematics of the event. However, the particles produced in this event will continue to interact as they pass through the nucleus, these final state interactions (FSI) contribute heavily to the energy distribution of the event vertex. The Fermi momentum, p\(_{\mbox{\footnotesize f}}\), and binding energy, E\(_{\mbox{\footnotesize b}}\), also alter the distribution.\\
+
+\begin{figure}[htb!]
+    \centering
+    \includestandalone[width = \textwidth]{otherEffects}
+    \caption{The top-left graph shows the vertex energy distribution taking into account possible FSI, p\(_{\mbox{\footnotesize f}}\) or E\(_{\mbox{\footnotesize b}}\) effects. The top-right graph is the distribution when removing FSI energy effects. The bottom-left graph is the distribution with FSI and  p\(_{\mbox{\footnotesize f}}\) removed, and the bottom-right graph removes all 3 effects. When all the effects are removed, the expected delta-peak at \(E = 2M_{\mbox{\footnotesize n}}\) is left.}
+    \label{fig:FSI}
+\end{figure}
+
+Figure~\ref{fig:FSI} shows how these effects alter the energy distribution:
+\begin{itemize}
+    \item Initially, there is a large Gaussian-like distribution centered at \(\sim E = 1150\) MeV. Attached to this is a much narrower peak centered at an energy close to \(E = 2M_{\mbox{\footnotesize n}}\)
+    \item When removing the FSIs, the Gaussian-like distribution disappears, leaving only the peak centered near \(E = 2M_n\)
+    \item This smeared distribution becomes almost a delta-peak centered to the left of \(E = 2M_{\mbox{\footnotesize n}}\) when also removing p\(_{\mbox{\footnotesize f}}\) 
+    \item The peak shifts to sit at exactly \(E = 2M_{\mbox{\footnotesize n}}\) when you have removed the FSI energies, the p\(_{\mbox{\footnotesize f}}\) contributions and E\(_{\mbox{\footnotesize b}}\)
+\end{itemize}
+
+This analysis therefore describes every possible element of the energy distribution we could expect to see at the end of the investigation.\\
+
+There are two main problems with reconstructing \(\nnbar\) events in an LArTPC:\\
+
+The first is the background contribution: It is important to run potential background signals through the reconstruction algorithms to determine how best to distinguish between signal and background events. This was done using a sample of atmospheric neutrinos, generated in GENIE and propagated through the detector using GEANT-4 and detsim.\\
+
+The second issue involves the energy deposition of particles. If a particle leaves the LArTPC without first depositing all of its energy, the detector will assume that the energy it did manage to deposit was its total energy. In the perfect-reco and actual data, this will have an additional effect on the energy distribution of an \(\nnbar\) vertex. This issue was addressed within analysis and will be referred to as a containment cut.
+
+\subsection{Perfect reconstruction}
+\label{sec:nnbarPReco}
+When modelling the events using Monte Carlo simulated samples it was important to only use data which would be available in a real reconstruction. In this investigation the appropriate information was given in LArLite's \texttt{Track} and \texttt{Shower} objects, which contain:
+
+\begin{multicols}{2}
+    \texttt{Track}
+    \begin{itemize}
+        \item Start position, cm (3-vector)
+        \item End position, cm (3-vector)
+        \item Particle Type:\\
+        \(\pi\), \(K\), \(p\), \(\mu\), other, unknown
+        \item Deposited/kinetic energy, MeV
+    \end{itemize}
+    
+    \columnbreak
+    
+    \texttt{Shower}
+    \begin{itemize}
+        \item Start position, cm (3-vector)
+        \item Direction, cm (3-vector)
+        \item Length, cm
+        \item Cone radius, cm
+        \item Deposited/kinetic energy, MeV
+    \end{itemize} 
+\end{multicols}
+
+
+An event visualiser was constructed in order to loosely assess how well the algorithms fared. An example visualisation is shown in Figure~\ref{fig:vis1} which shows all tracks and showers in an event.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale = 0.6,trim={9cm 4cm 4cm 4cm},clip]{event121_view2_unannotated.png}
+    \caption{A example visualisation of the track and shower behaviour in a simulated \(\nnbar\) event.}
+    \label{fig:vis1}
+\end{figure}
+
+The 3 main steps involved in the reconstruction of \(\nnbar\) events are described in sections~\ref{sec:pi0Reco}, \ref{sec:vertexing} and \ref{sec:nnbarSel}.\\
+
+\clearpage
+%------------------------------------------------
+\subsection{\(\pi^0\) reconstruction}
+\label{sec:pi0Reco}
+The branching ratios in Table~\ref{tab:BranchNuc} indicate that the most significant products of the \(\nnbar\) annihilation will be charged and neutral \(\pi\)s, it was therefore necessary to begin the analysis by producing a highly-efficient \(\pi^0\) reconstruction algorithm.\\
+
+Since the lifetime of a \(\pi^0\) is \(\tau_{\pi^0} \sim 10^{-16}s\) \cite{pi0Lifetime} and given the branching ratios in Table~\ref{tab:BranchPi0} state that they decay to two photons \(\sim 99\%\) of the time: \(\pi^0\)s were reconstructed from their photon decay products.\\
+
+Initially, photons in an event were grouped into pairs and various metrics were calculated:
+\begin{itemize}
+    \item Invariant mass, \(M = \sqrt{2E_1E_2(1-\cos\theta)}\), where \(E_1\) and \(E_2\) are the energies of the two photons
+    \item Distance of closest approach of their start positions, \(D\)
+    \item \(\ln (D)\)
+    \item \(E_{\mbox{\footnotesize frac}} = \dfrac{E_1}{E_2}\)
+    \item \(E_{\mbox{\footnotesize min}}\): the minimum energy out of \(E_1\) and \(E_2\)
+    \item \(E_{\mbox{\footnotesize asym}} = \dfrac{|E_1 - E_2|}{E_1 + E_2}\): the energy asymmetry of the two photons
+    \item The angle between the photons, \(\cos\theta\)
+\end{itemize}
+
+Truth-level and perfect-reconstruction information were combined in order to calculate which property of the photon pairs produced the most significant likelihood, l, distributions within an event. With
+
+\[ l = \frac{N_{\pi^0}}{N_{\pi^0}+N_{\mbox{\footnotesize non}-\pi^0}}\]
+
+where \(N_{\pi^0}\) is the number of \(\pi^0\) signals and \(N_{\mbox{\footnotesize non}-\pi^0}\) is the number of non-\(\pi^0\)s. This distribution would be flat for an insignificant likelihood, and have a definite shape for a significant likelihood. Of the 7 metrics described above, 4 produced likelihood distributions which could potentially help identify a true \(\pi^0\). These distributions were fitted and are shown in Figure~\ref{fig:likelihoods}.
+
+\begin{figure}[htb!]
+    \centering
+    \includestandalone[width = \textwidth]{Likelihoods}
+    \caption{The top-left graph shows the \(\cos\theta\) likelihood distribution. The top-right graph is the fitted \(\ln D\) distribution. The bottom-left graph is the likelihood distribution of \(M\). The bottom-right graph is the \(E_{\mbox{\footnotesize min}}\) likelihood distribution. All of which have been fitted to.}
+    \label{fig:likelihoods}
+\end{figure}
+
+The fitted graphs gave a likelihood distribution \(L_i\) for each metric, i, where (i = \(\ln (D)\), \(M\), \( E_{\mbox{\footnotesize min}}\)  and \(\cos\theta\)), these values of \(L_i\) were combined logarithmically:
+
+\[ \ln (L) = \sum_i \ln (L_i) \]
+
+Using truth-level information to identify the particles, \(\ln (L) \) was plotted for non-\(\pi^0\)s and overlaid with the same distribution for \(\pi^0s\). In order to find the value of \(\ln (L)\) which would optimise the efficiency and purity of the \(\pi^0\) reconstruction algorithm, a hill-climbing algorithm was written using the distributions in Figure~\ref{fig:lnL}. The basic functionality of this algorithm was as follows:
+
+\begin{figure}[htb!]
+    \centering
+    \includestandalone[width = 0.75\textwidth]{hillClimb}
+    \caption{The \(\ln (L)\) distributions of the known-\(\pi^0\)s and non-\(\pi^0\)s. This figure also shows how the cut value (the dotted blue line, at \(\ln (L) = -6.47\) for the first method) was altered and defines the regions of the \(\ln (L)\) distribution. \(N_{\mbox{\footnotesize S}}\) is the number of \(\pi^0\)s selected for a given cut value, \(N_{\mbox{\footnotesize R}}\) is the number rejected, \(M_{\mbox{\footnotesize S}}\) is the number of non-\(\pi^0\)s selected at that cut value and \(M_{\mbox{\footnotesize R}}\) is the number of non-\(\pi^0\)s rejected at the cut value.}
+    \label{fig:lnL}
+\end{figure}
+
+Firstly, the efficiency and purity of the algorithm was calculated at a cut value on \(\ln (L)\) chosen by eye from Figure~\ref{fig:lnL} using:
+
+\begin{equation}
+\label{eq:efficiency}
+    \varepsilon = \frac{N_{\mbox{\footnotesize S}}}{N_{\mbox{\footnotesize S}}+N_{\mbox{\footnotesize R}}}
+\end{equation}
+
+\begin{equation}
+\label{eq:purity}
+    P = \frac{N_{\mbox{\footnotesize S}}}{N_{\mbox{\footnotesize S}}+M_{\mbox{\footnotesize S}}}
+\end{equation}
+
+Where, \(N_{\mbox{\footnotesize S}}\) and \(N_{\mbox{\footnotesize R}}\) are the number of selected and rejected \(\pi^0\) candidates respectively and \(M_{\mbox{\footnotesize S}}\) is the number of other particles selected as \(\pi^0\) candidates, equations~(\ref{eq:efficiency}) and (\ref{eq:purity}) were then multiplied to find \(\varepsilon P\) which could then be optimised.\\
+
+The cut value was shifted left and right by a chosen step size, \(\varepsilon P\) was re-calculated and the cut was moved to the position at which it was the largest. If neither direction offered a better candidate value of \(\varepsilon P \), the step size was increased and the check was repeated. This process continued until the maximum value of \(\varepsilon P\) was found. The cut value obtained using this method was \(\ln (L) = -6.47\). \\
+
+Another consideration was necessary: In an event which contained more than 2 photons, there were multiple possible combinations of these which could form a \(\pi^0\). After applying the \(\ln (L)\) cuts, the remaining photons were grouped into all possible combinations of pairs and \(\ln (L_{\mbox{\footnotesize tot}})\) was calculated for each. The best combination of pairs would be the one with the highest \(\ln (L_{\mbox{\footnotesize tot}})\). However, for a single photon pair \(\ln (L_{\mbox{\footnotesize tot}})\) would be larger than for a combination of multiple pairs, it was therefore said that:\\
+
+\textbf{The optimum combination of shower pairs in an event was the one with the maximum \(\ln (L_{\mbox{\footnotesize tot}})\) for the largest possible number of pairs.}\\
+
+After applying all of the aforementioned cuts, the \(\pi^0\) algorithm was found to perform with \(\varepsilon =  58.6\%\) and \(P = 93.5\%\). Since this was the first stage in the \(\nnbar\) reconstruction, \(\varepsilon\) and \(P\) would contribute to every subsequent efficiency and purity in the algorithm, therefore maximising these values was crucial.\\
+
+Instead of adding the \(E_{\mbox{\footnotesize min}}\) distribution to the \(\ln (L)\) summation, \(\pi^0\) candidates with energies below \(E < E_{\mbox{\footnotesize min}} = 60 \) MeV were cut since the \(E_{\mbox{\footnotesize min}}\) likelihood distribution appears to sharply decrease for energies below this value. Using the optimisation process described earlier, the cut value on \(\ln (L)\) was re-calculated to be \(\ln (L) = -5.69\) and the candidate photon pair combinations were re-optimised. The new \(\pi^0\) reconstruction method gave: \(\varepsilon = 39.7\%\) and \(P = 93.6\%\).\\
+
+One final alteration was implemented: The initial containment cut correctly removed a large number of particles. Although this may be a necessary element of the \(\nnbar\) reconstruction as a whole, applying it so early may have been detrimental to the efficiency of the algorithms. After being reconsidered further down the line, it was found to have little effect. Instead, it was decided that \(\pi^0\)s would be selected by only applying the \(\ln (L)\) cut and the optimum photon combination check in an attempt to maximise the \(\pi^0\) reconstruction efficiency. The final \(\pi^0\) reconstruction algorithm performed with \(\varepsilon = 87.2\%\) and \(P = 91.0\%\).\\
+
+The results of the three \(\pi^0\) reconstruction methods attempted are given as a flow diagram in Figure~\ref{fig:pi0RecoResults}. 
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale = 0.6,trim={0 1cm 0 2cm},clip]{methodsResults}
+    \caption{This diagram depicts how the efficiency and purity changed at each step in the 3 \(\pi^0\) methods attempted. The middle strand was the first method, the left-most strand was the second method and the right-most strand was the final method. The red and green numbers represent the decrease in efficiency and increase in purity respectively after each step.  The black numbers in brackets are: (left) the number of \(\pi^0\)s and (right) the number of non-\(\pi^0\)s after each cut, these numbers were the ones used to calculate the effiencies and purities along the way. The final \(\varepsilon P\) results confirm that the third method was the most successful of the three.}
+    \label{fig:pi0RecoResults}
+\end{figure}
+
+\clearpage
+%------------------------------------------------
+\subsection{Vertex finding}
+\label{sec:vertexing}
+The final-state particles in the \(\nnbar\) oscillation event needed to be grouped into vertices. Once all the vertices in an event had been located, the \(\pi^0\)s obtained using the reconstruction were added to the vertex they were closest to, provided that vertex was within a tolerance of the \(\pi^0\)'s location. The event viewer once again acted as a visual assessment of the algorithm's performance.\\
+
+Since the start and end positions, \texttt{start} and \texttt{end}, of tracks would be available in real data, the vertexing method was based around these parameters. Initially, a tolerance, \texttt{t} = 0.02 cm, on the distance between \texttt{start} and \texttt{end} was chosen since this was found to be the largest distance between all \texttt{start}s in a vertex. \\
+
+To identify whether a track had a parent associated with it, its start position was compared with all other tracks' end positions to check if any were closer than \texttt{t}. If track \texttt{j}'s end position was within \texttt{t} of track \texttt{i}'s start, where (\texttt{i \(\neq\) j}), then \texttt{j} was a candidate parent of \texttt{i}. One issue with this occurs when a track's length was shorter than \texttt{t}, in which case both its \texttt{start} and \texttt{end} could be associated with another's. A track was determined to have a parents (non-primary) if it fell under both of the following conditions for any \texttt{j}:
+
+\begin{itemize}
+    \item \texttt{|start[i]} - \texttt{end[j]}|  < \texttt{t}
+    \item \texttt{|start[i] - start[j]| > \texttt{t}}
+\end{itemize}
+
+The next stage of the method was locating primary vertices. Candidate primary tracks were held in a list which was looped over to check if \texttt{start} was within \texttt{t} of any previously-defined vertices. In the case that it wasn't, a new vertex was added to the list of existing vertices at the location of the current track. Alternatively, if the \texttt{start} was within \texttt{t} of any existing vertices, this track was added to the closest vertex whose location was re-calculated to be the average of all the track's start positions within it.\\
+
+Of all the events which did contain a primary (\(\nnbar\)) vertex, a candidate for this was identified and found to contain only primaries and all of the particles \(99.6\%\) of the time. \\
+
+The final step was adding the \(\pi^0\)s to the most suitable vertex. Using truth level information, a distribution of the distances between a \(\pi^0\)'s start position and the location of the true \(\nnbar\) vertex was plotted in order to find the most appropriate cut value. The distance between all candidate primary vertices was also checked to ensure the chosen cut value would not allow the \(\pi^0\) to be associated with more than one vertex. Using these checks and in order to correctly allocate \(\sim 90 \%\) of all \(\pi^0\)s to its \(\nnbar\) vertex, a cut value of 10 cm was chosen.\\ 
+
+\clearpage
+%------------------------------------------------
+\subsection{\(\nnbar\) event selection}
+\label{sec:nnbarSel}
+Once the vertices had been located and the \(\pi^0\)s added to them, the event visualiser was amended to once again show how the algorithm had performed. In Figure~\ref{fig:vis2} the green circle corresponds to the location of the true \(\nnbar\) vertex and its size once the \(\pi^0\)s were added to it. The smaller circles within the vertex are the reconstructed \(\pi^0\)s whose directions are denoted by a line drawn within the circles.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale = 0.6,trim={9cm 4cm 4cm 4cm},clip]{event121_view2_annotated.png}
+    \caption{The \(\nnbar\) event in Figure~\ref{fig:vis1} has now been amended to show the location of the reconstructed \(\pi^0\) candidates, the locations of the primary vertices and how the vertex radius alters with the addition of the \(\pi^0\)s. The green vertex has been identified as the true \(\nnbar\) vertex using truth information.}
+    \label{fig:vis2}
+\end{figure}
+
+The kinematic distributions of the primary vertices were compared with those of a data set filled with atmospheric neutrino (background) events. Figure~\ref{fig:EtotComp} highlights two important outcomes of the analysis at this stage. The first is that its shape closely matches that of the truth-level energy distribution shown in the top-left graph on Figure~\ref{fig:FSI}. The second important outcome is that it differs quite significantly with the energy distribution of the atmospheric neutrinos, which means the background energy distribution may not have a substantial effect on the ability to reconstruct the \(\nnbar\) events. \\
+
+\begin{figure}[htb!]
+    \centering
+    \includestandalone[width = \textwidth]{ETotComparison}
+    \caption{The left-hand graph is the energy distribution of the primary vertices in the \(\nnbar\) data file. The right-hand graph is the analogous distribution for the atmospheric neutrino background events.}
+    \label{fig:EtotComp}
+\end{figure}
+
+The momentum distribution for an \(\nnbar\) event was expected to be focussed around the Fermi-momentum of the event: \(\sim 400\) MeV/c. Figure~\ref{fig:PtotComp} shows that this was the case, though the atmospheric neutrino momentum distribution also peaks around this value, therefore the signal and background events may be indistinguishable in terms of this parameter.\\
+
+\begin{figure}[htb!]
+    \centering
+    \includestandalone[width = \textwidth]{PTotComparison}
+    \caption{The left-hand graph is the momentum distribution of the primary vertices in the \(\nnbar\) data file. The right-hand graph is the analogous distribution for the atmospheric neutrino background events.}
+    \label{fig:PtotComp}
+\end{figure}
+
+A final comparison between the \(\nnbar\) events and the atmospheric background events was made between the number of final state particles which emerged from each event type. The distributions of final state particles which were neither charged/neutral \(\pi\)s or protons an \(\nnbar\) or atmospheric \(\nu\) event are shown in Figure~\ref{fig:FSIComp}. In the \(\nnbar\) events, the only peak exists when this number is zero, whereas the \(\nu\) backgrounds have peaks at 1 and above. A cut on this distribution could help confidently select \(\nnbar\) events from their backgrounds.\\
+
+\begin{figure}[t]
+    \centering
+    \includestandalone[width = \textwidth]{nOtherComp}
+    \caption{These graphs are the final state distributions of particles which were neither charged/neutral \(\pi\)s or protons for the respective data sets.}
+    \label{fig:FSIComp}
+\end{figure}
+
+% The cuts
+Within the \(\nnbar\) data set, there exist a large number of primary vertices which are not due to \(\nnbar\) events. This will reduce the purity of the \(\nnbar\) signals we will see in the detector. Loose cuts based on the distributions in Figures~\ref{fig:EtotComp},\ref{fig:PtotComp} and \ref{fig:FSIComp} were decided upon for \(\nnbar\) signals, \(\nu\) backgrounds and the non-\(\nnbar\) vertices in the data set. The cuts chosen were:
+
+\begin{itemize}
+    \item Anything with \# badFS (= \# non-\(\pi^{\pm,0}\)s or protons) > 0
+    \item Anything with total energy \(E_{\mbox{\footnotesize tot}}\) < 230 MeV
+    \item Anything with total momentum \(P_{\mbox{\footnotesize tot}}\) > 1200 MeV
+\end{itemize}
+
+The resulting efficiencies and purity of this analysis are given in Table~\ref{tab:RESULTS} in which the cuts are applied on top of one another 
+
+\begin{table}[htb!]
+    \footnotesize
+    \begin{center}
+        \begin{tabular}{ c c | c c c | c c c }
+            \hline\hline
+            
+            \multicolumn{2}{c |}{} & \multicolumn{3}{c |}{\(\#\) after consecutive cuts applied ( \(L \rightarrow R\) )} & \multicolumn{3}{c}{Results}\\
+            \hline
+            
+            % Headings
+            Type & \(\#\) Initially & \(\#\) badFS > 0 & \(E_{\mbox{\footnotesize tot}}\) < 230 MeV & \(P_{\mbox{\footnotesize tot}}\) > 1200 MeV & \(\varepsilon\) & \(\varepsilon^{'}\) & P \\
+            
+            % Content
+            True \(\nnbar\)     & 3508 & 3491 & 3329 & 3273 & \(93.3\%\) &            & \\
+            False \(\nnbar\)    & 7991 & 5127 & 513  & 511  &            &            & \(86.4\%\) \\
+            Atmospheric \(\nu\) & 3508 & 3491 & 3329 & 3273 &            & \(80.4\%\) & \\
+             \hline\hline
+        \end{tabular}
+    \caption{The resulting number of \(\nnbar\) signal events, the number of non-\(\nnbar\) events and the number of atmospheric \(\nu\) backgrounds when the various energy and final states cuts were applied. \(\varepsilon\) is the efficiency on the number of true \(\nnbar\) events kept, \(\varepsilon^{'}\) is the efficiency on the number of atmospheric events lost and P is the purity of \(\nnbar\) events in the data set.}
+    \label{tab:RESULTS}
+    \end{center}
+\end{table}
+
+In words: after applying the cuts, \(93.3\%\) of true \(\nnbar\) events are kept. This couples with a purity of \(86.4\%\) when taking into account the vertices not due to an \(\nnbar\) in the data set. The number of atmospheric \(\nu\) background events which were dropped using these cuts was \(80.4\%\). This is the starting point for a sensitivity calculation of DUNE to \(\nnbar\) oscillations.
+\clearpage
+%------------------------------------------------
+
+\section{Discussion}
+The efficiencies and purities achieved in this investigation will be applied to further analysis on DUNE's potential sensitivity to the \(\nnbar\) oscillations. Relative rates of signal and background events would be required in order to proceed with the calculations.\\
+
+The algorithms produced in this study could be tested using real data from the MicroBooNE experiment after re-tuning them on simulated cosmogenic events. If these cosmogenic events, whose topology were discussed in section~\ref{sec:cosmics}, were to occur in the MicroBooNE detector then the selection algorithms could potentially pick them up. If this were to happen, it would be an extremely positive indicator that any sensitivities calculated using this amalgamation of methods could be trusted.\\
+
+In an experimental data set, triggering algorithms would have to be applied initially which will cut down large numbers of potential events and background. Subsequently, the efficiencies and purity calculated in this investigation will be added to the ones produced by these procedures which will reduce the overall effectiveness of the \(\nnbar\) selection algorithms.\\
+
+Within this \(\nnbar\) reconstruction, the stand-alone \(\pi^0\) and vertexing algorithms work to high efficiencies and will therefore be highly applicable in many external research areas.\\
+
+The final results of this research project are extremely promising and lay the groundwork for an the potential reconstruction of real \(\nnbar\) oscillation events.
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\begin{thebibliography}{1}
+    \bibitem{sak} A. Sakharov. \textit{Violation of CP invariance, C asymmetry, and baryon
+    asymmetry of the universe}. Journal of Experimental and Theoretical Physics. 1967.
+    	
+    \bibitem{nnbarOsc} R. N. Mohapatra. \textit{Neutron-Anti-Neutron Oscillation: Theory
+    and Phenomenology}. arXiv:0902.0834v1 [hep-ph] 5 Feb 2009.
+    
+    \bibitem{nnbarTheory} D. G. Phillips II. et al. \textit{Neutron-Antineutron Oscillations: Theoretical Status and Experimental Prospects}. arXiv:1410.1100v2 [hep-ex] 18 Oct 2015.
+    
+    \bibitem{superK} K. Abe. Y. Hayat. T. Iida. et al. Super-Kamiokande collaboration. \textit{Search 	for n-nbar oscillation in SuperKamiokande}. Phys. Rev. D 91, 072006. 2015.
+    
+    \bibitem{LArProperties} J. Joshi. X. Qian. \textit{Signal Processing in the MicroBooNE LArTPC}. arXiv:1511.00317v1 [physics.ins-det] 1 Nov 2015.
+    
+    \bibitem{GLoBES} A. Beck. F. Beroz. et al. \textit{SNOwGLoBES: SuperNova Observatories with
+    GLoBES: DRAFT} Version 1.1 March 11, 2013.\\
+    http://www.tapir.caltech.edu/$\sim$cott/CGWAS2013/snowglobes\_1.1.pdf cited on 10/05/16.
+    
+    \bibitem{uBooNETech} MicroBooNE collaboration. \textit{The MicroBooNE Technical Design Report}. 2012.\\ http://www-microboone.fnal.gov/publications/TDRCD3.pdf
+    
+    \bibitem{uBoone} MicroBooNE collaboration. \textit{About the Detector}. 2016.\\
+    http://www-microboone.fnal.gov/public/aboutdetector.html cited on 10/05/16. 
+    
+    \bibitem{FermiToday} C. Patrick. \textit{MicroBooNE sees first accelerator-born neutrinos}. Fermilab Today.\\ http://www.fnal.gov/pub/today/archive/archive$\_$2015/today15-11-02.html cited on 27/12/15. Article produced on 02/11/15.
+    
+    \bibitem{nnbarPaper} K. Babu. S. Banerjee. et al. \textit{Neutron-Antineutron Oscillations}. http://arxiv.org/pdf/1310.8593.pdf 2013.
+    
+    \bibitem{B0B0bar} G. Borissov. \textit{Evidence for an anomalous like-sign
+    dimuon charge asymmetry}. 2010.\\ http://www-d0.fnal.gov/Run2Physics/WWW/results/final/B/B10A/
+    GBorissov\_Fermilab14May2010.pdf cited on 10/05/2016.
+    
+    \bibitem{MarkyBabes} M Thomson. \textit{Modern Particle Physics}. Cambridge University Press. 2013. 
+    
+    \bibitem{resolution} S. Gollapinni. \textit{Status of the MicroBooNE LArTPC and Prospective low-energy neutrino interaction measurements in Argon}. http://www.hep.ph.ic.ac.uk/\(\sim\)wascko/nuint14/talks/4.1.3\_gollapinni\_20140522.pdf cited on 10/05/16.
+    
+    \bibitem{uBooNEPhysics} MicroBooNE collaboration. \textit{MicroBooNE Physics}. 2016.\\
+    http://www-microboone.fnal.gov/public/aboutphysics.html cited on 10/05/16.
+    
+    \bibitem{nDensity} K. E. Holbert. \textit{Atomic Number Density}.\\ http://holbert.faculty.asu.edu/eee460/NumberDensity.pdf 2014. cited on 10/05/16.
+    
+    \bibitem{PDG} J. Beringer. et al. \textit{Particle Data Group}. PR D86, 010001. 2012. http://pdg.lbl.gov.
+    
+    \bibitem{bubChamb} A. Backenstoss et al. \textit{Proton - Anti-proton Annihilations
+    at Rest Into \(\pi^0 \omega ,\pi^0 \eta ,\pi^0 \gamma , \pi^0 \pi^0 and \pi^0 \eta '\)} Nucl. Phys. B 228, 424 (1983).
+    
+    \bibitem{fermiMom} A. M. Ankowski.J. T. Sobczyk. \textit{Argon spectral function and neutrino interactions}. Phys. Rev. C74. 054316. arXiv:nucl-th/0512004v4. 2006.
+    
+    \bibitem{GENIE} \textit{GENIE} http://www.genie-mc.org/ cited on 11/05/16.
+    
+    \bibitem{G4} \textit{GEANT-4} https://geant4.web.cern.ch/geant4/ cited on 11/05/16.
+    
+    \bibitem{CORSIKA} D. Heck. J. Knapp. et al. \textit{CORSIKA: A Monte Carlo Simulated Code to Simulate Extensive Air Showers }. http://digbib.ubka.uni-karlsruhe.de/volltexte/fzk/6019/6019.pdf cited on 12/05/16
+    
+    \bibitem{pi0Lifetime} K. Kampf. B. Moussallam. \textit{Chiral expansions of the \(\pi^0\) lifetime}. arXiv:0901.4688v2 [hep-ph] 5 May 2009.
+
+\end{thebibliography}
+
+\clearpage
+\newpage
+.
+\thispagestyle{empty}
+\newpage
+%---------------------------------------------------------------------------------------
+\end{document}
+
+

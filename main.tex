@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MPhys Report
+% Semester 2
+% 
+% Started on 04/05/16
+% Author: Rhiannon Jones
+% 4th Year MPhys Sem2
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+% Downloads the required packages for certain features
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}         % Palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+\renewcommand*\rmdefault{Type1}
+\usepackage{ulem}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{courier}
+\bibliographystyle{unsrt}
+\linespread{1.2} % Line spacing - Palatino needs more space between lines
+% Load all packages needed for all sub−files:
+\usepackage{xcolor}
+\definecolor{purpleX}{rgb}{0.573,0,1}
+\definecolor{greenX}{rgb}{0.349,0.831,0.329}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=28mm,
+ right=28mm,
+ top=30mm,
+ bottom=30mm,
+ }% Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{gray}}
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\LARGE} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\itshape} % Set the abstract itself to italic text
+\usepackage{titlesec} % Allows customization of titles
+\titleformat{\section}[block]{\large}{\thesection.}{.8em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\scshape\itshape}{\thesubsection.}{.8em}{} % Change the look of the section titles
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{5mm}\fontsize{20pt}{12pt}\selectfont A preliminary investigation into determining \\ \vspace{3mm} CC0\(\pi\) cross-section sensitivities in SBND \\ \vspace{6mm} } % Article title
+
+\author{
+\large Rhiannon Jones\\
+\normalsize University of Liverpool \\
+\normalsize School of Physical Sciences \\ % Institution
+\normalsize rjones@hep.ph.liv.ac.uk \\ 
+\vspace{3mm}
+\normalsize 1\( ^{ \mbox{\footnotesize st } } \) year PhD report \\
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle % Insert title
+\vspace{6mm}
+\begin{figure}[h!]
+    \center
+    \includegraphics[scale=0.6]{images/UoL_CoA.pdf}
+\end{figure}
+\vspace{6mm}
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\begin{abstract}
+    Random stuff
+\end{abstract}
+\newpage
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+\pagenumbering{arabic}
+\section{Introduction}
+\label{sec:intro}
+
+\input{introduction.tex}
+
+%---------------------------------------------------------------------------------------------------------------
+\section{Neutrino Interaction Phenomenology in the few-GeV Energy Range}
+\label{sec:NIP}
+
+\input{interaction_phenom.tex}
+
+%---------------------------------------------------------------------------------------------------------------
+\section{Theory and Recent Measurements of CC0\( \pi \) Cross-Section}
+\label{sec:XSec}
+
+\input{cc0pi_xsec.tex}
+
+%---------------------------------------------------------------------------------------------------------------
+\section{A Global Fit of CC0\( \pi \) Data}
+\label{sec:GF}
+
+\input{global_fit.tex}
+
+%---------------------------------------------------------------------------------------------------------------
+\section{Prospects for a CC0\( \pi \) Measurement at SBND and Sensitivity Esimates}
+\label{sec:Prospects}
+
+\input{prospects_sensitivity.tex}
+
+%---------------------------------------------------------------------------------------------------------------
+
+\section{Discussion}
+
+\input{discussion.tex}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\begin{thebibliography}{1}
+
+
+\end{thebibliography}
+
+\clearpage
+\newpage
+.
+\thispagestyle{empty}
+\newpage
+%---------------------------------------------------------------------------------------
+\end{document}
