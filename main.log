@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2013.4.11)  27 APR 2017 10:51
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  27 APR 2017 11:59
+>>>>>>> 33231889a3afc9cb07e04198f13beba7ae1c1cff
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -369,6 +373,11 @@ File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
 (/usr/share/texmf/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -525,6 +534,7 @@ File: block.tss 2005/01/22
 ) (./main.aux)
 \openout1 = `main.aux'.
 
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
@@ -614,58 +624,173 @@ LaTeX Font Warning: Font shape `T1/Type1/m/n' in size <20> not available
 
 LaTeX Font Info:    Calculating math sizes for size <20> on input line 74.
 LaTeX Font Info:    Try loading font information for OT1+pplx on input line 74.
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Try loading font information for T1+pplx on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
+File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen158
+\scratchbox=\box60
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen159
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks31
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(79.66771pt, 438.17245pt, 79.66771pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=438.17245pt
+* \textheight=674.33032pt
+* \oddsidemargin=7.39772pt
+* \evensidemargin=7.39772pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 77.
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 77.
+>>>>>>> 33231889a3afc9cb07e04198f13beba7ae1c1cff
 
 (/usr/share/texmf/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 77.
 
 
 (/usr/share/texmf/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 77.
 
 
 (/usr/share/texmf/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 77.
 
 
 (/usr/share/texmf/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 77.
 
 
 (/usr/share/texmf/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 20.84015pt on input line 74.
+(Font)              scaled to size 20.84015pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.8384pt on input line 74.
+(Font)              scaled to size 15.8384pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50421pt on input line 74.
+(Font)              scaled to size 12.50421pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 20.84015pt on input line 74.
+(Font)              scaled to size 20.84015pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.8384pt on input line 74.
+(Font)              scaled to size 15.8384pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50421pt on input line 74.
+(Font)              scaled to size 12.50421pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 74.
+(Font)              scaled to size 12.50409pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 74.
+(Font)              scaled to size 9.37807pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 74.
+(Font)              scaled to size 7.29405pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 74.
+(Font)              scaled to size 12.50409pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 74.
+(Font)              scaled to size 9.37807pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 74.
+(Font)              scaled to size 7.29405pt on input line 77.
 
 
 pdfTeX warning: pdflatex (file ./images/UoL_CoA.pdf): PDF inclusion: found PDF 
@@ -673,25 +798,27 @@ version <1.5>, but at most version <1.4> allowed
 <images/UoL_CoA.pdf, id=1, 218.3461pt x 221.35777pt>
 File: images/UoL_CoA.pdf Graphic file (type pdf)
  <use images/UoL_CoA.pdf>
+<<<<<<< HEAD
+=======
+Package pdftex.def Info: images/UoL_CoA.pdf used on input line 83.
+(pdftex.def)             Requested size: 131.00867pt x 132.81567pt.
+>>>>>>> 33231889a3afc9cb07e04198f13beba7ae1c1cff
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 92.
+(Font)              scaled to size 11.40997pt on input line 95.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 92.
+(Font)              scaled to size 8.33606pt on input line 95.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 92.
+(Font)              scaled to size 6.25204pt on input line 95.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 92.
+(Font)              scaled to size 11.40997pt on input line 95.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 92.
+(Font)              scaled to size 8.33606pt on input line 95.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 92.
-
-
-LaTeX Font Warning: Font shape `T1/Type1/m/it' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 100.
+(Font)              scaled to size 6.25204pt on input line 95.
 
 [1
 
+<<<<<<< HEAD
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/UoL_CoA.pdf
 
 pdfTeX warning: pdflatex (file ./images/UoL_CoA.pdf): PDF inclusion: Page Group
@@ -703,22 +830,26 @@ LaTeX Font Warning: Font shape `T1/Type1/m/sc' undefined
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
+=======
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/UoL_CoA.pdf>]
+(./introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+>>>>>>> 33231889a3afc9cb07e04198f13beba7ae1c1cff
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+Type1 on input line 26
-.
-LaTeX Font Info:    No file OMSType1.fd. on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 27.
 
-LaTeX Font Warning: Font shape `OMS/Type1/m/n' undefined
+LaTeX Font Info:    No file OMSpplx.fd. on input line 27.
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 26.
+(Font)              for symbol `textbullet' on input line 27.
 
-
-LaTeX Font Warning: Font shape `T1/Type1/bx/n' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 30.
-
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 31.
 [1] (./images/sbnd_stats_table.tex)
+<<<<<<< HEAD
 <images/LArTPC.pdf, id=26, 776.9025pt x 444.66125pt>
 File: images/LArTPC.pdf Graphic file (type pdf)
  <use images/LArTPC.pdf>
@@ -732,6 +863,18 @@ LaTeX Font Warning: Font shape `T1/Type1/bx/it' undefined
 (Font)              using `T1/Type1/bx/n' instead on input line 5.
 
 [4
+=======
+<images/LArTPC.pdf, id=24, 776.9025pt x 444.66125pt>
+File: images/LArTPC.pdf Graphic file (type pdf)
+ <use images/LArTPC.pdf>
+Package pdftex.def Info: images/LArTPC.pdf used on input line 55.
+(pdftex.def)             Requested size: 438.17245pt x 250.79305pt.
+
+[2 <./images/LArTPC.pdf>] [3]) (./interaction_phenom.tex
+LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/pplx/b/it' tried instead on input line 5.
+ [4
+>>>>>>> 33231889a3afc9cb07e04198f13beba7ae1c1cff
 
 ]) (./cc0pi_xsec.tex [5
 
@@ -739,20 +882,18 @@ LaTeX Font Warning: Font shape `T1/Type1/bx/it' undefined
 
 ]) (./prospects_sensitivity.tex [7
 
-]) (./discussion.tex [8
+])
+(./discussion.tex [8
 
 ]) (./main.bbl) [9
 
 ] (./main.aux)
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.74pt have occurred.
-
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  4106 strings out of 256216
  51263 string characters out of 1917072
  117623 words of memory out of 1500000
@@ -774,5 +915,26 @@ Output written on main.pdf (10 pages, 233895 bytes).
 PDF statistics:
  267 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
+=======
+ 5883 strings out of 495028
+ 80880 string characters out of 6181497
+ 151123 words of memory out of 5000000
+ 8915 multiletter control sequences out of 15000+600000
+ 55259 words of font info for 121 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,8n,38p,554b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (10 pages, 213479 bytes).
+PDF statistics:
+ 103 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+>>>>>>> 33231889a3afc9cb07e04198f13beba7ae1c1cff
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
