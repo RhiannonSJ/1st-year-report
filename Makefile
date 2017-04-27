@@ -8,7 +8,7 @@ all : $(MAIN_FILE)
 	pdflatex $(MAIN_FILE)  > compile.log
 	evince $(MAIN_FILE_OUT) &
 
-#tesi.bbl : $(TEXFILES) $(BIBLIOGRAPHY)
+#bib.bib : $(TEXFILES) $(BIBLIOGRAPHY)
 #	pdflatex $(MAIN_FILE)
 #	pdflatex $(MAIN_FILE)
 #	bibtex $(MAIN_FILE_NAME)
