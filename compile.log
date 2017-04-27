@@ -124,7 +124,6 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  )
-<<<<<<< HEAD
 (see the transcript file for additional information){/usr/share/texmf/fonts/enc
 /dvips/base/8r.enc} </user/rjones/.texlive2007/texmf-var/fonts/pk/ljfour/jknapp
 en/ec/ecrm1728.600pk> </user/rjones/.texlive2007/texmf-var/fonts/pk/ljfour/jkna
@@ -135,19 +134,5 @@ r/jknappen/ec/ecrm2074.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb
 ></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (9 pages, 232774 bytes).
-=======
-(see the transcript file for additional information){/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/base/8r.enc} </home/rjones/.texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecrm1728.600pk> </home/rjones/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
-m0900.600pk> </home/rjones/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600p
-k> </home/rjones/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/
-rjones/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
-ino/uplri8a.pfb>
-Output written on main.pdf (10 pages, 230867 bytes).
->>>>>>> 71d1ae7dbe5a2085fd7a50db5adddd6793acdd8c
+Output written on main.pdf (10 pages, 233895 bytes).
 Transcript written on main.log.
