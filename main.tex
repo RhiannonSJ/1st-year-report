@@ -26,7 +26,6 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{courier}
-\bibliographystyle{unsrt}
 \linespread{1.2} % Line spacing - Palatino needs more space between lines
 % Load all packages needed for all sub−files:
 \usepackage{xcolor}
@@ -146,18 +145,11 @@
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-\begin{thebibliography}{1}
+\bibliographystyle{plain}
+\bibliography{bib}
 
-    \bibitem{nuOsc} The Super Kamiokande Collaboration. Evidence for oscillation of atmospheric neutrinos. arXiv:hep-ex/9807003v2 31 Aug 1998.
+    %\bibitem{nuOsc} The Super Kamiokande Collaboration. Evidence for oscillation of atmospheric neutrinos. arXiv:hep-ex/9807003v2 31 Aug 1998.
 
-    \bibitem{nuInt} K. McFarland. Neutrino Interactions. arXiv:0804.3899v1 [hep-ex] 24 Apr 2008.
-
-\end{thebibliography}
-
-\clearpage
-\newpage
-.
-\thispagestyle{empty}
-\newpage
+    %\bibitem{nuInt} K. McFarland. Neutrino Interactions. arXiv:0804.3899v1 [hep-ex] 24 Apr 2008.
 %---------------------------------------------------------------------------------------
 \end{document}
