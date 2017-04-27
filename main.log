@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  27 APR 2017 10:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  27 APR 2017 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,6 +372,11 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -549,26 +554,23 @@ File: block.tss 2011/12/15
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Try loading font information for T1+Type1 on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Try loading font information for T1+pplx on input line 71.
 
-LaTeX Font Info:    No file T1Type1.fd. on input line 70.
-
-
-LaTeX Font Warning: Font shape `T1/Type1/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 70.
-
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplx.fd
+File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
+)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
@@ -663,125 +665,108 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-LaTeX Font Warning: Font shape `T1/Type1/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 74.
-
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 74.
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 74.
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 77.
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 77.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 77.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 77.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 74.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 77.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 20.84015pt on input line 74.
+(Font)              scaled to size 20.84015pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.8384pt on input line 74.
+(Font)              scaled to size 15.8384pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50421pt on input line 74.
+(Font)              scaled to size 12.50421pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 20.84015pt on input line 74.
+(Font)              scaled to size 20.84015pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.8384pt on input line 74.
+(Font)              scaled to size 15.8384pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50421pt on input line 74.
+(Font)              scaled to size 12.50421pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 74.
+(Font)              scaled to size 12.50409pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 74.
+(Font)              scaled to size 9.37807pt on input line 77.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 74.
+(Font)              scaled to size 7.29405pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 74.
+(Font)              scaled to size 12.50409pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 74.
+(Font)              scaled to size 9.37807pt on input line 77.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 74.
+(Font)              scaled to size 7.29405pt on input line 77.
 
 <images/UoL_CoA.pdf, id=1, 218.3461pt x 221.35777pt>
 File: images/UoL_CoA.pdf Graphic file (type pdf)
  <use images/UoL_CoA.pdf>
-Package pdftex.def Info: images/UoL_CoA.pdf used on input line 80.
+Package pdftex.def Info: images/UoL_CoA.pdf used on input line 83.
 (pdftex.def)             Requested size: 131.00867pt x 132.81567pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 92.
+(Font)              scaled to size 11.40997pt on input line 95.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 92.
+(Font)              scaled to size 8.33606pt on input line 95.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 92.
+(Font)              scaled to size 6.25204pt on input line 95.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 92.
+(Font)              scaled to size 11.40997pt on input line 95.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 92.
+(Font)              scaled to size 8.33606pt on input line 95.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 92.
-
-
-LaTeX Font Warning: Font shape `T1/Type1/m/it' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 100.
+(Font)              scaled to size 6.25204pt on input line 95.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/UoL_CoA.pdf>]
 (./introduction.tex
-
-LaTeX Font Warning: Font shape `T1/Type1/m/sc' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+Type1 on input line 26
-.
-LaTeX Font Info:    No file OMSType1.fd. on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 27.
 
-LaTeX Font Warning: Font shape `OMS/Type1/m/n' undefined
+LaTeX Font Info:    No file OMSpplx.fd. on input line 27.
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 26.
+(Font)              for symbol `textbullet' on input line 27.
 
-
-LaTeX Font Warning: Font shape `T1/Type1/bx/n' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 30.
-
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 31.
 [1] (./images/sbnd_stats_table.tex)
-<images/LArTPC.pdf, id=27, 776.9025pt x 444.66125pt>
+<images/LArTPC.pdf, id=24, 776.9025pt x 444.66125pt>
 File: images/LArTPC.pdf Graphic file (type pdf)
  <use images/LArTPC.pdf>
-Package pdftex.def Info: images/LArTPC.pdf used on input line 54.
+Package pdftex.def Info: images/LArTPC.pdf used on input line 55.
 (pdftex.def)             Requested size: 438.17245pt x 250.79305pt.
 
 [2 <./images/LArTPC.pdf>] [3]) (./interaction_phenom.tex
-
-LaTeX Font Warning: Font shape `T1/Type1/bx/it' undefined
-(Font)              using `T1/Type1/bx/n' instead on input line 5.
-
-[4
+LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/pplx/b/it' tried instead on input line 5.
+ [4
 
 ]) (./cc0pi_xsec.tex [5
 
@@ -789,41 +774,35 @@ LaTeX Font Warning: Font shape `T1/Type1/bx/it' undefined
 
 ]) (./prospects_sensitivity.tex [7
 
-]) (./discussion.tex [8
+])
+(./discussion.tex [8
 
 ]) (./main.bbl) [9
 
 ] (./main.aux)
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.74pt have occurred.
-
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 5764 strings out of 495028
- 79410 string characters out of 6181497
- 150203 words of memory out of 5000000
- 8811 multiletter control sequences out of 15000+600000
- 39039 words of font info for 106 fonts, out of 8000000 for 9000
+ 5883 strings out of 495028
+ 80880 string characters out of 6181497
+ 151123 words of memory out of 5000000
+ 8915 multiletter control sequences out of 15000+600000
+ 55259 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,8n,38p,620b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/rjones/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/rjones/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rjones/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecrm1095.600pk> </home/rjones/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecrm1200.600pk> </home/rjones/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
-2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (10 pages, 230867 bytes).
+ 38i,8n,38p,554b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (10 pages, 213479 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -20,12 +20,13 @@
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palladio needs more leading (space between lines)
 \usepackage[T1]{fontenc}
-\renewcommand*\rmdefault{Type1}
+%\renewcommand*\rmdefault{Type1}
 \usepackage{ulem}
 \usepackage{amssymb}
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{courier}
+\usepackage{cite}
 \linespread{1.2} % Line spacing - Palatino needs more space between lines
 % Load all packages needed for all sub−files:
 \usepackage{xcolor}
@@ -68,6 +69,8 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
+\nocite{*}
 
 \pagenumbering{gobble}
 
@@ -145,7 +148,7 @@
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{bib}
 
     %\bibitem{nuOsc} The Super Kamiokande Collaboration. Evidence for oscillation of atmospheric neutrinos. arXiv:hep-ex/9807003v2 31 Aug 1998.
