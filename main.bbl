@@ -15,4 +15,41 @@ J.~A. Formaggio and G.~P. Zeller.
 \newblock {From eV to EeV: Neutrino Cross Sections Across Energy Scales}.
 \newblock {\em Rev. Mod. Phys.}, 84:1307--1341, 2012.
 
+\bibitem{genie}
+Costas Andreopoulos, Christopher Barry, Steve Dytman, Hugh Gallagher, Tomasz
+  Golan, Robert Hatcher, Gabriel Perdue, and Julia Yarba.
+\newblock {The GENIE Neutrino Monte Carlo Generator: Physics and User Manual}.
+\newblock 2015.
+
+\bibitem{prof}
+Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
+  Seggern.
+\newblock {Systematic event generator tuning for the LHC}.
+\newblock {\em Eur. Phys. J.}, C65:331--357, 2010.
+
+\bibitem{sbn}
+M.~Antonello et~al.
+\newblock {A Proposal for a Three Detector Short-Baseline Neutrino Oscillation
+  Program in the Fermilab Booster Neutrino Beam}.
+\newblock 2015.
+
+\bibitem{BR}
+Dinko Pocanic, Emil Frlez, and Andries van~der Schaaf.
+\newblock {Experimental study of rare charged pion decays}.
+\newblock {\em J. Phys.}, G41:114002, 2014.
+
+\bibitem{larRes}
+B.~Baller et~al.
+\newblock {Liquid Argon Time Projection Chamber Research and Development in the
+  United States}.
+\newblock {\em JINST}, 9:T05005, 2014.
+
+\bibitem{evDisp}
+C.~Patrick.
+\newblock Microboone sees first accelerator-born neutrinos.
+\newblock
+  \url{http://www.fnal.gov/pub/today/archive/archive_2015/today15-11-02.html},
+  02-11-2015.
+\newblock Cited on 27-04-2017.
+
 \end{thebibliography}

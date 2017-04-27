@@ -1,48 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
-Database file #1: bib.bib
+Database file #1: mybib.bib
 Warning--empty journal in nuInt
-You've used 3 entries,
+Warning--empty journal in genie
+Warning--empty journal in sbn
+You've used 9 entries,
             1791 wiz_defined-function locations,
-            468 strings with 3998 characters,
-and the built_in function-call counts, 769 in all, are:
-= -- 72
-> -- 20
+            504 strings with 4982 characters,
+and the built_in function-call counts, 1978 in all, are:
+= -- 166
+> -- 94
 < -- 1
-+ -- 8
-- -- 5
-* -- 46
-:= -- 120
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 3
++ -- 35
+- -- 26
+* -- 121
+:= -- 330
+add.period$ -- 28
+call.type$ -- 9
+change.case$ -- 9
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 34
-empty$ -- 77
-format.name$ -- 5
-if$ -- 177
+cite$ -- 12
+duplicate$ -- 82
+empty$ -- 190
+format.name$ -- 26
+if$ -- 437
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 3
-pop$ -- 7
+int.to.str$ -- 9
+missing$ -- 8
+newline$ -- 49
+num.names$ -- 9
+pop$ -- 26
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 20
+skip$ -- 39
 stack$ -- 0
-substring$ -- 74
-swap$ -- 9
+substring$ -- 131
+swap$ -- 13
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 7
-width$ -- 4
-write$ -- 34
-(There was 1 warning)
+warning$ -- 3
+while$ -- 16
+width$ -- 10
+write$ -- 97
+(There were 3 warnings)
