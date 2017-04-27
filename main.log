@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  27 APR 2017 10:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  27 APR 2017 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,18 +749,8 @@ LaTeX Font Warning: Font shape `T1/Type1/m/it' undefined
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/UoL_CoA.pdf>]
 (./introduction.tex
 
-LaTeX Font Warning: Font shape `T1/Type1/bx/n' undefined
-(Font)              using `T1/Type1/m/n' instead on input line 3.
-
-
-LaTeX Warning: Citation `nuOsc' on page 1 undefined on input line 3.
-
-
 LaTeX Font Warning: Font shape `T1/Type1/m/sc' undefined
 (Font)              using `T1/Type1/m/n' instead on input line 9.
-
-
-LaTeX Warning: Citation `nuOsc' on page 1 undefined on input line 13.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -774,6 +764,10 @@ LaTeX Font Info:    No file OMSType1.fd. on input line 26.
 LaTeX Font Warning: Font shape `OMS/Type1/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbullet' on input line 26.
+
+
+LaTeX Font Warning: Font shape `T1/Type1/bx/n' undefined
+(Font)              using `T1/Type1/m/n' instead on input line 30.
 
 [1] (./images/sbnd_stats_table.tex)
 <images/LArTPC.pdf, id=27, 776.9025pt x 444.66125pt>
@@ -797,9 +791,9 @@ LaTeX Font Warning: Font shape `T1/Type1/bx/it' undefined
 
 ]) (./discussion.tex [8
 
-])
-No file main.bbl.
-(./main.aux)
+]) (./main.bbl) [9
+
+] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -807,18 +801,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 5762 strings out of 495028
- 79392 string characters out of 6181497
- 150200 words of memory out of 5000000
+ 5764 strings out of 495028
+ 79410 string characters out of 6181497
+ 150203 words of memory out of 5000000
  8811 multiletter control sequences out of 15000+600000
  39039 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,8n,38p,632b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,38p,620b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/rjones/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/rjones/.texmf-var/fo
 nts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/rjones/.texmf-var/fonts/pk/ljf
@@ -829,10 +820,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (9 pages, 230001 bytes).
+Output written on main.pdf (10 pages, 230867 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 269 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
