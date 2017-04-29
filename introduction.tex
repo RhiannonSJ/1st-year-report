@@ -1,4 +1,4 @@
-Neutrino physics is at the core of current high energy research. One of the profound discoveries made in recent years was the observation of neutrino flavour oscillations by the Super-Kamiokande (Super-K) experiment, which was the first confiramtion that physics existed beyond the standard model of particle physics. In brief, neutrinos described by the standard model would be massless particles, but since the flavours are made up of superpositions of mass states, the oscillation of
+Neutrino physics is at the core of current high energy research. One of the profound discoveries made in recent years was the observation of neutrino flavour oscillations by the Super-Kamiokande (Super-K) experiment, which was the first confirmation that physics existed beyond the standard model of particle physics. In brief, neutrinos described by the standard model would be massless particles, but since the flavours are made up of superpositions of mass states, the oscillation of
 the flavour states implies that the relative mass states are different, and therefore non-zero \cite{nuInt}.
 
     Future, long-baseline,  neutrino experiments such as the Deep Underground Neutrino Experiment (DUNE) and Hyper-Kamiokande (Hyper-K) are hoping to investigate some of the most fundamental questions we are still asking: Why does the universe constist of matter, and not anti-matter? What is the neutrino mass heirarchy? Neutrino research is an extremely active field. Optimising the current and future detectors to maximise the accuracy of all interaction anaylses is a crucial step towards obtaining concrete answers to these questions. 
@@ -13,9 +13,10 @@ Another property of the neutrino which poses a significant difficulty within det
 
 \subsection{Cross-sections}
    
-    In order to correctly model neutrino events within a specific detector geometry and material, certain parameters have to be known. In particular, the probability of an interaction taking place - its cross-section - is required for each possible interaction the neutrino could undergo. Cross-section measurements are therefore a necessity for the generators, and consequently the future detector studies mentioned earlier. 
+    In order to correctly model neutrino events within a specific detector geometry and material, certain parameters have to be known. In particular, the probability of an interaction taking place - its cross-section - is required for each possible interaction the neutrino could undergo. Cross-section measurements are therefore a necessity for the Monte Carlo event generators, and consequently the future detector studies mentioned earlier. 
     
-    The extent of our current knowledge of charged current neutrino cross sections is shown in Figure~\ref{fig:xsecCurr}. The plot contains cross-section information from multiple types of neutrino experiment, differing in both target material and detector machinery. A feature of this plot which is of the most interest to a Short Baseline Near Detector (SBND) cross-section study in particular is the lack of precision in the measurements made towards the lower energy region \cite{xsecCurr}. SBND will not only be operational at this energy range, but it will also have substantial enough statistics to potentially make a significant contribution to improving the current knowledge in this region.
+    The extent of our current knowledge of charged current neutrino cross sections is shown in Figure~\ref{fig:xsecCurr}. The plot contains cross-section information from multiple types of neutrino experiment, differing in both target material and detector machinery. A feature of this plot which is of the most interest to a Short Baseline Near Detector (SBND) cross-section study in particular, is the lack of precision in the measurements made towards the $\sim$1 GeV region
+    \cite{xsecCurr}. SBND will not only be operational at this energy range, but it will also have statistics substantial enough to potentially make a significant contribution to improving the current knowledge in this region.
 
     %CC cross-sections
     \begin{figure}[h!]
@@ -37,6 +38,16 @@ GENIE is the world leading Monte Carlo neutrino interaction generator. Generator
 
     Alongside building state-of-the art detectors and making high precision cross-section measurements to improve current and future neutrino physics analyses, the predictions made by the generators can be improved by taking existing neutrino data and performing a fit of the models to them. 
 
-    An effort to do this is currently being carried out by GENIE, using the Professor software framework, which was written with this purpose for experiments at the LHC \cite{prof}. The ultimate goal of this exercise is to perfom a global fit to all neutrino scattering data and consequently produce comprehensive model configurations to further optimise the predictions made for the next generation of neutrino experiments. This work will and GENIE's role in current and future neutrino experiments will be discussed further in section~\ref{sec:GF}.
+    An effort to do this is currently being carried out by GENIE, using the Professor software framework, which was written with this purpose for experiments at the LHC \cite{prof}. The ultimate goal of this exercise is to perfom a global fit to all neutrino scattering data and consequently produce comprehensive model configurations to further optimise the predictions made for the next generation of neutrino experiments. This work and GENIE's role in current and future neutrino experiments will be discussed further in section~\ref{sec:GF}.
+
+\subsection{SBND Physics Goals}
+
+SBND is one of 3 liquid argon detectors using the same neutrino beam in the Short Baseline Neutrino (SBN) program. Together, they aim to explore neutrino oscillations at 3 different positions along the beam, allowing for highly senstive measurements to be made \cite{sbn}.   
+
+Another objective of the SBN program, along with many other neutrino physics experiments, is to observe or reject the existence of sterile neutrinos. Though this will not be discussed here.
+
+The MiniBooNE and LSND experiments observed an excess of low energy electron neutrino appearance in their data \cite{mbEx}. One of the main physics goals of SBND is to look for and characterise this excess, in collaboration with any results obtained by the MicroBooNE experiment before SBND is taking data. The beamline of MicroBooNE is 470m compared to 110m for SBND, whether one or both experiments observe the excess will tell us if there was a dependence on the distance travelled by the neutrinos \cite{sbn}. \\
+
+This report will further describe the current status of neutrino cross-section analyses, the level importance that these measurements have in the field, and how a sensitivity calculation in the low GeV energy region is being carried out. It will then explain in more detail how Monte Carlo neutrino generators can be, and are being improved using recent and historical scattering data, through a global fit of comprehensive theoretical model configurations.  
 
 \clearpage

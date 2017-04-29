@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{nuInt}
 Kevin~Scott McFarland.
@@ -33,6 +33,12 @@ M.~Antonello et~al.
   Program in the Fermilab Booster Neutrino Beam}.
 \newblock 2015.
 
+\bibitem{mbEx}
+A.~A. Aguilar-Arevalo et~al.
+\newblock {Unexplained Excess of Electron-Like Events From a 1-GeV Neutrino
+  Beam}.
+\newblock {\em Phys. Rev. Lett.}, 102:101802, 2009.
+
 \bibitem{BR}
 Dinko Pocanic, Emil Frlez, and Andries van~der Schaaf.
 \newblock {Experimental study of rare charged pion decays}.
@@ -51,5 +57,10 @@ C.~Patrick.
   \url{http://www.fnal.gov/pub/today/archive/archive_2015/today15-11-02.html},
   02-11-2015.
 \newblock Cited on 27-04-2017.
+
+\bibitem{lartpc}
+R.~Acciarri et~al.
+\newblock {Design and Construction of the MicroBooNE Detector}.
+\newblock {\em JINST}, 12(02):P02017, 2017.
 
 \end{thebibliography}
