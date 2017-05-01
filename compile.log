@@ -110,19 +110,24 @@ LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./images/uboone_ev.png>]
-<images/SBND_TPC.pdf, id=62, 838.13126pt x 512.91624pt>
-<use images/SBND_TPC.pdf>
+<images/SBN_fluxes.pdf, id=62, 490.7613pt x 131.00456pt>
+<use images/SBN_fluxes.pdf> (./images/sbnd_stats_table.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./images/sbnd_stats_table.tex [6 <./images/LArTPC.pdf>]) [7 <./images/SBND_TPC
-.pdf>]) (./interaction_phenom.tex [8]) (./cc0pi_xsec.tex [9]) (./global_fit.tex
- [10]) (./prospects_sensitivity.tex [11]) (./discussion.tex [12]) (./main.bbl
+[6 <./images/LArTPC.pdf> <./images/SBN_fluxes.pdf
+
+pdfTeX warning: pdflatex (file ./images/SBN_fluxes.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>] <images/SBND_TPC.pdf, id=165, 838.13126pt x 512.91624pt>
+<use images/SBND_TPC.pdf> [7 <./images/SBND_TPC.pdf>] [8])
+(./interaction_phenom.tex [9]) (./cc0pi_xsec.tex [10]) (./global_fit.tex
+[11]) (./prospects_sensitivity.tex [12]) (./discussion.tex [13]) (./main.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 Underfull \hbox (badness 1199) in paragraph at lines 54--60
 \T1/pcr/m/n/10.95 gov / pub / today / archive / archive _ 2015 / today15-[]11-[
 ]02 . html$\T1/pplx/m/n/10.95 , 02-11-2015.
-) [13] (./main.aux)
+) [14] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -138,5 +143,5 @@ share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
 fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
 o/uplri8a.pfb>
-Output written on main.pdf (14 pages, 4412357 bytes).
+Output written on main.pdf (15 pages, 4446134 bytes).
 Transcript written on main.log.

@@ -68,42 +68,61 @@ A general purpose LArTPC diagram is given in Figure~\ref{fig:lartpc}. A brief de
     %LArTPC
     \begin{figure}[h!]
         \center
-        \includegraphics[width=\textwidth]{images/LArTPC.pdf}
+        \includegraphics[width=.85\textwidth]{images/LArTPC.pdf}
         \caption{An example neutrino interaction within a typical LArTPC. The ionization electrons drift in what is defined as the positive x-direction as shown, and the scintillation light would be collected by the wall of PMTs behind the wire places. The induction planes U and V are at 60$^{\circ}$ to the vertical collection plane Y. The neutrino would enter the TPC in the positive z-direction.}
         \label{fig:lartpc}
     \end{figure}
 
 \subsection{SBND}    
 
-    SBND will have a beamline of 110m, the shortest in the SBN program. At this distance, the statistics and resolution combined 
+SBND will have a beamline of 110m, the shortest in the SBN program. At this distance, the flux of the neutrino beam is $\sim$100 times that of the other 2 SBN detectors, these relative fluxes are simulated as a function of neutrino energy and shown graphically in Figure~\ref{fig:sbnFlux} \cite{sbn}. Consequently, the number of events expected during the full exposure of the experiment is around 7,000,000. A breakdown in terms of individual processes is given in Figure~\ref{fig:sbndStats} \cite{sbn}. Combining these huge statistics with the exceptional resolution capabilities of the liquid argon TPCs will allow SBND to make unprecedentedly high-precision cross-section and oscillation measurements. Working both in conjuction with MicroBooNE and ICARUS, and as a stand-alone experiment, SBND should produce some exciting and extremely important results.
+
+    % SBN fluxes
+    \begin{figure}[h!]
+        \center
+        \includegraphics[width=\textwidth]{images/SBN_fluxes.pdf}
+        \put(-45, -1){\scriptsize E$_{\nu}$ ( GeV )}
+        \put(-192, -1){\scriptsize E$_{\nu}$ ( GeV )}
+        \put(-340, -1){\scriptsize E$_{\nu}$ ( GeV )}
+        \put(-438, 12){ \rotatebox{90}{\tiny $ \Phi ( \nu )_{ \mbox{SBND} } $/50 MeV /m$^{2}$/10$^{6}$ POT } }
+        \put(-291, 12){ \rotatebox{90}{\tiny $ \Phi ( \nu )_{ \mu \mbox{BooNE} } $/50 MeV /m$^{2}$/10$^{6}$ POT } }
+        \put(-144, 12){ \rotatebox{90}{\tiny $ \Phi ( \nu )_{ \mbox{ICARUS} } $/50 MeV /m$^{2}$/10$^{6}$ POT } }
+        \put(-315, 102){\tiny $\nu_{\mu}$}
+        \put(-315, 95){\tiny $\bar{\nu}_{\mu}$ }
+        \put(-315, 88){\tiny $\nu_{e}$}
+        \put(-315, 81){\tiny $\bar{\nu}_{e}$}
+        \put(-168, 102){\tiny $\nu_{\mu}$}
+        \put(-168, 95){\tiny $\bar{\nu}_{\mu}$ }
+        \put(-168, 88){\tiny $\nu_{e}$}
+        \put(-168, 81){\tiny $\bar{\nu}_{e}$}
+        \put(-21, 102){\tiny $\nu_{\mu}$}
+        \put(-21, 95){\tiny $\bar{\nu}_{\mu}$ }
+        \put(-21, 88){\tiny $\nu_{e}$}
+        \put(-21, 81){\tiny $\bar{\nu}_{e}$}
+        \caption{From left to right, the BNB fluxes of SBND, MicroBooNE ($\mu$BooNE and ICARUS. From these plots it can be seen that SBND's flux will be $\sim$100 times the other two \cite{sbn}.}
+        \label{fig:sbnFlux}
+    \end{figure}
     
-    % Plan
-    \begin{itemize}
+    % Table
+    \begin{figure}[h!]
+        \center
+        \input{images/sbnd_stats_table.tex}
+        \caption{Some expected statistics for the entire exposure of SBND, broken down into some of the processes by which the neutrino may interact \cite{sbn}.}
+        \label{fig:sbndStats}
+    \end{figure}
     
-        \item SBND specifics
-
-        \begin{itemize}
-
-            \item Dimensions
-            \item Beamline
-            \item Flux
-            \item Statistics
-            \item Physics goals
-
-        \end{itemize}
-        
-        \item Cross-section precision capabilites
-
-    \end{itemize}
-
+    SBND will be 5m long, 4m tall and 4m wide holding a total of 112 tonnes of liquid argon in its active volume. As an LArTPC, SBND will function in mostly the same way as described earlier and in Figure~\ref{fig:lartpc}, although it will have some unique features. Figure~\ref{fig:sbndtpc} gives an idea of how the detector will be constructed. 
+    
     % SBND TPC
     \begin{figure}[h!]
         \center
-        \includegraphics[width=\textwidth]{images/SBND_TPC.pdf}
-        \caption{SBND TPC}
+        \includegraphics[width=.85\textwidth]{images/SBND_TPC.pdf}
+        \caption{A diagram to give an idea of how the SBND detector will look. It features many similarities to the standard liquid argon TPC design, but applies the concept of multiple modules - this is a possibility for the structure of DUNE \cite{sbn}.}
         \label{fig:sbndtpc}
     \end{figure}
-    % Table
-    \input{images/sbnd_stats_table.tex}
-    
- \clearpage
+   
+    \newpage 
+
+    Unlike the typical TPC setup, SBND will have 2 cathode planes, 4 anode planes and 2 time projection chambers. The cathode planes will lie side-by-side, positioned at the join between the two TPCs. The anode planes will also lie in twos next to one another, with a pair residing on the opposite wall to the cathode plane of each TPC. This allows for 2 electric fields and therefore 2 opposing drift directions. In the same way as shown in Figure~\ref{fig:lartpc}, there will be 3 wire planes to each anode plane. In the gaps between two adjacent anode planes, electrodes will divert the approaching particles towards the nearest active parts of the plane \cite{sbn}. The multiple module system may well be a feature of the next generation TPC detectors such as DUNE. 
+
+\clearpage
