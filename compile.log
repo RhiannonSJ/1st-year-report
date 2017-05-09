@@ -121,13 +121,16 @@ pdfTeX warning: pdflatex (file ./images/SBN_fluxes.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >] <images/SBND_TPC.pdf, id=165, 838.13126pt x 512.91624pt>
 <use images/SBND_TPC.pdf> [7 <./images/SBND_TPC.pdf>] [8])
-(./interaction_phenom.tex [9]) (./cc0pi_xsec.tex [10]) (./global_fit.tex
-[11]) (./prospects_sensitivity.tex [12]) (./discussion.tex [13]) (./main.bbl
+(./interaction_phenom.tex
+<images/feynmans.pdf, id=180, 350.07588pt x 123.14809pt>
+<use images/feynmans.pdf> [9 <./images/feynmans.pdf>] [10]) (./cc0pi_xsec.tex
+[11]) (./global_fit.tex [12]) (./prospects_sensitivity.tex [13])
+(./discussion.tex [14]) (./main.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 Underfull \hbox (badness 1199) in paragraph at lines 54--60
 \T1/pcr/m/n/10.95 gov / pub / today / archive / archive _ 2015 / today15-[]11-[
 ]02 . html$\T1/pplx/m/n/10.95 , 02-11-2015.
-) [14] (./main.aux)
+) [15] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -140,8 +143,7 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatin
-o/uplri8a.pfb>
-Output written on main.pdf (15 pages, 4446134 bytes).
+fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/palatino/uplri8a.pfb>
+Output written on main.pdf (16 pages, 4490323 bytes).
 Transcript written on main.log.
