@@ -68,4 +68,22 @@ Teppei Katori and Marco Martini.
 \newblock {Neutrino-Nucleus Cross Sections for Oscillation Experiments}.
 \newblock 2016.
 
+\bibitem{MEC}
+Teppei Katori.
+\newblock {Meson Exchange Current (MEC) Models in Neutrino Interaction
+  Generators}.
+\newblock {\em AIP Conf. Proc.}, 1663:030001, 2015.
+
+\bibitem{dipReg}
+A.~Bodek, H.~S. Budd, and M.~E. Christy.
+\newblock {Neutrino Quasielastic Scattering on Nuclear Targets: Parametrizing
+  Transverse Enhancement (Meson Exchange Currents)}.
+\newblock {\em Eur. Phys. J.}, C71:1726, 2011.
+
+\bibitem{xsecModels}
+Luis Alvarez-Ruso.
+\newblock {Neutrino interactions: challenges in the current theoretical
+  picture}.
+\newblock {\em Nucl. Phys. Proc. Suppl.}, 229-232:167--173, 2012.
+
 \end{thebibliography}

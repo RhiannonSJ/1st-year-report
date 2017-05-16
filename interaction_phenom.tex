@@ -20,11 +20,12 @@ One dominant background to the CC0\(\pi\) process is an NC1\(\pi^{\pm}\) interac
         \pi^{-} \longrightarrow \mu^{-} + \bar{\nu}_{\mu}
     \end{equation}
 
-    Backgrounds such as this are an important consideration in all analyses. Though in high resolution detectors such as SBND, distinguishing true signal should be good enough to minimise the contribution of such impurities. 
+    Backgrounds such as this are an important consideration in all analyses. Though in high resolution detectors such as SBND, the ability to distinguish true signal should be possible to the extent that impurity contributions are minimal. 
 
 \subsection{Energy reconstruction}
 
-    The energy of the incoming neutrino must be reconstructed from the other particles involved in the interaction. When dealing simply with a 2-body hadronic process, such as the one shown in the left hand side of Figure~\ref{fig:feyn}, it is acceptible to use the quasi-elastic estimation~(\ref{eq:Ereco}) \cite{teppei} to calculate the reconstructed energy, $\bar{E}_{\nu}$. Where $E_{\mu}, m_{\mu}$ and $\underline{k}'_{\mu}$ are the energy, mass and 3-momentum of the final state muon, $M_{N}$ is the mass of a target nucleon and $\theta$ is the opening angle between the outgoing muon and proton.  
+    The energy of the incoming neutrino must be reconstructed from the other particles involved in the interaction. When dealing simply with a 2-body hadronic process, such as the one shown in the left hand side of Figure~\ref{fig:feyn}, it is acceptible to use the quasi-elastic estimation~(\ref{eq:Ereco}) \cite{teppei} to calculate the reconstructed energy, $\bar{E}_{\nu}$. Where $E_{\mu}, m_{\mu}$ and $\underline{k}'_{\mu}$ are the energy, mass and 3-momentum of the final state
+    muon, $M_{N}$ is the mass of a target nucleon and $\theta$ is the opening angle between the outgoing muon and proton \cite{teppei}.  
 
 
     \begin{equation}\label{eq:Ereco}
@@ -52,7 +53,7 @@ Another phenomenon that is not accounted for in the free nucleon theory is the p
         n + \nu_{\mu} \longrightarrow p + p + \mu^{-}
     \end{equation}
 
-    which is known as the 2-particle 2-hole effect, dominated by the Meson Exchange Current (MEC). When infact, the interaction in equation~(\ref{eq:realMEC}),
+    which is known as the 2-particle 2-hole effect, dominated by the Meson Exchange Current (MEC) \cite{MEC}. When infact, the interaction in equation~(\ref{eq:realMEC}),
     
     \begin{equation}\label{eq:realMEC}
         n + p + \nu_{\mu} \longrightarrow p + p + \mu^{-}
@@ -60,9 +61,9 @@ Another phenomenon that is not accounted for in the free nucleon theory is the p
 
     actually occured within the nucleus. \\
 
-In recent experiments, an excess of scattering events have been observed with respect to the theoretical predictions. It is now believed that MEC could be responsible, and it is therefore a primary concern of theorists, neutrino event generators and nuclear physicists to work together in correctly simulating what may occur in all future neutrino experiments with nuclear targets, in order to overcome these issues.
+    In recent experiments, an excess of scattering events have been observed with respect to the theoretical predictions. It is now believed that MEC could be responsible, and it is therefore a primary concern of theorists, neutrino event generators and nuclear physicists to work together in correctly simulating what may occur in all future neutrino experiments with nuclear targets, in order to overcome these issues \cite{MEC}.
 
-The region of interest with respect to this excess of scattering events is depicted in Figure~\ref{fig:dipReg}. The point of cross-over between the QE and Inelastic interaction cross sections alone dips significantly, whereas the data indicates that the dip should not be quite as drastic. When adding in the MEC contribution and calculating the total cross section, this dip region increases to fit more closely with the data.  
+    The region of interest with respect to this excess of scattering events is depicted in Figure~\ref{fig:dipReg} \cite{dipReg}. The point of cross-over between the QE and Inelastic interaction cross sections alone dips significantly, whereas the data indicates that the dip should not be quite as drastic. When adding in the MEC contribution and calculating the total cross section, this dip region increases to fit more closely with the data.  
 
     \begin{figure}[h!]
         \centering
@@ -71,7 +72,7 @@ The region of interest with respect to this excess of scattering events is depic
         \label{fig:dipReg}
     \end{figure}
 
-    Another indication that MEC is the cause of the observed excess is shown in Figure~\ref{fig:CCQEXsec}. In this diagram, various theoretical models are shown along with the data obtained. Here, most of the models fit to one another, but their cross sections collectively reside much lower than appears in the data. The closest fitting model to this data is the Martini, LFG+2p2h+RPA model, where 2p2h is the MEC contribution. Though tuning the parameter M\(_{A}\) also improves the RFG fit.  
+    Another indication that MEC is the cause of the observed excess is shown in Figure~\ref{fig:CCQEXsec} \cite{xsecModels}. In this diagram, various theoretical models are shown along with the data obtained. Here, most of the models fit to one another, but their cross sections collectively reside much lower than appears in the data. The closest fitting model to this data is the Martini, LFG+2p2h+RPA model, where 2p2h is the MEC contribution. Though tuning the parameter M\(_{A}\) also improves the RFG fit.  
 
     \begin{figure}[h!]
         \centering
@@ -89,6 +90,13 @@ To address these complications in practice, a preliminary exercise was carried o
     This exercise also contributed to the initial construction of an anaylsis framework which will eventually be expanded to incorporate fully reconstructed simulations and multiple final state topologies. In the first stage of this exercise however, a MC sample of neutrino events was generated and a manual amount of smearing was applied to them along with energy cuts and an application of pionic impurities in order to loosely represent reconstructed events in SBND whilst training the analysis framework.  
 
 The Monte Carlo sample of SBND events was simulated using the Default+MEC GENIE model and the SBND flux, given in Figure~\ref{fig:SBNDFlux}. The quantites applied to the smearing, impurity additions and energy cuts are as follows, 
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=.8\textwidth, trim=0 0 0 1cm, clip]{images/sbnd_flux.pdf}
+        \caption{The flux of \(\nu_{\mu}\) at the short baseline near detector used to generate the neutrino events used throughout the following exercise}
+        \label{fig:SBNDFlux}
+    \end{figure}
 
 \begin{itemize}
     \item Fill after meeting with Ornella

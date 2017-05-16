@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  16 MAY 2017 15:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.4.26)  16 MAY 2017 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,10 +861,10 @@ Package pdftex.def Info: images/feynmans.pdf used on input line 6.
 File: images/inter_nuc.pdf Graphic file (type pdf)
 
 <use images/inter_nuc.pdf>
-Package pdftex.def Info: images/inter_nuc.pdf used on input line 44.
+Package pdftex.def Info: images/inter_nuc.pdf used on input line 45.
 (pdftex.def)             Requested size: 262.90614pt x 117.94861pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
@@ -873,53 +873,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 File: images/dip_region_3.png Graphic file (type png)
 
 <use images/dip_region_3.png>
-Package pdftex.def Info: images/dip_region_3.png used on input line 69.
+Package pdftex.def Info: images/dip_region_3.png used on input line 70.
 (pdftex.def)             Requested size: 350.53929pt x 251.73528pt.
 
 <images/CCQE_xsec_2.png, id=216, 3184.89874pt x 2325.68875pt>
 File: images/CCQE_xsec_2.png Graphic file (type png)
 
 <use images/CCQE_xsec_2.png>
-Package pdftex.def Info: images/CCQE_xsec_2.png used on input line 78.
+Package pdftex.def Info: images/CCQE_xsec_2.png used on input line 79.
 (pdftex.def)             Requested size: 350.53929pt x 255.9685pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./images/dip_region_3.png>]
+<images/sbnd_flux.pdf, id=221, 569.12625pt x 385.44pt>
+File: images/sbnd_flux.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `fig:SBNDFlux' on page 12 undefined on input line 91.
+<use images/sbnd_flux.pdf>
+Package pdftex.def Info: images/sbnd_flux.pdf used on input line 96.
+(pdftex.def)             Requested size: 350.53929pt x 219.8863pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12 <./images/CCQE_xsec_2.png>]
 
-LaTeX Warning: Reference `fig:MBComp' on page 13 undefined on input line 114.
+LaTeX Warning: Reference `fig:MBComp' on page 13 undefined on input line 122.
 
 
-Overfull \hbox (3.01889pt too wide) in paragraph at lines 113--115
+Overfull \hbox (3.01889pt too wide) in paragraph at lines 121--123
 []\T1/pplx/m/n/10.95 One po-ten-tial ex-ten-tion to this ex-er-cise would be to
  com-pare the smeared/reconstructed
  []
 
-[13]) (./cc0pi_xsec.tex [14
-
-]) (./global_fit.tex
-<images/mec_model_genie.png, id=232, 259.01569pt x 185.0112pt>
+[13 <./images/sbnd_flux.pdf, page is rotated 90 degrees>]) (./global_fit.tex
+<images/mec_model_genie.png, id=275, 259.01569pt x 185.0112pt>
 File: images/mec_model_genie.png Graphic file (type png)
 
 <use images/mec_model_genie.png>
 Package pdftex.def Info: images/mec_model_genie.png used on input line 18.
 (pdftex.def)             Requested size: 262.90614pt x 187.7999pt.
- [15
+ [14
 
- <./images/mec_model_genie.png>] [16])
-(./prospects_sensitivity.tex [17
+ <./images/mec_model_genie.png>] [15])
+(./cc0pi_xsec.tex [16
 
-]) (./discussion.tex [18
+]) (./prospects_sensitivity.tex [17
+
+]) (./discussion.tex
+[18
 
 ]) (./main.bbl
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Underfull \hbox (badness 1199) in paragraph at lines 54--60
@@ -938,10 +945,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6181 strings out of 495028
- 85015 string characters out of 6181497
- 155678 words of memory out of 5000000
- 9153 multiletter control sequences out of 15000+600000
+ 6189 strings out of 495028
+ 85152 string characters out of 6181497
+ 155700 words of memory out of 5000000
+ 9160 multiletter control sequences out of 15000+600000
  87371 words of font info for 191 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,10n,38p,915b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -955,10 +962,10 @@ ic/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplr.pfb><
 xlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (20 pages, 5895532 bytes).
+Output written on main.pdf (20 pages, 5910708 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 328 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
