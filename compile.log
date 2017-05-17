@@ -151,10 +151,13 @@ Overfull \hbox (3.01889pt too wide) in paragraph at lines 121--123
 []\T1/pplx/m/n/10.95 One po-ten-tial ex-ten-tion to this ex-er-cise would be to
  com-pare the smeared/reconstructed
 [13 <./images/sbnd_flux.pdf, page is rotated 90 degrees>]) (./global_fit.tex
-<images/mec_model_genie.png, id=275, 259.01569pt x 185.0112pt>
-<use images/mec_model_genie.png> [14 <./images/mec_model_genie.png>] [15])
-(./cc0pi_xsec.tex [16]) (./prospects_sensitivity.tex [17]) (./discussion.tex
-[18]) (./main.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+<images/model_summaries.pdf, id=275, 389.01141pt x 84.8201pt>
+<use images/model_summaries.pdf>
+<images/mec_model_genie.png, id=276, 259.01569pt x 185.0112pt>
+<use images/mec_model_genie.png> [14 <./images/model_summaries.pdf> <./images/m
+ec_model_genie.png>] [15]) (./cc0pi_xsec.tex [16]) (./prospects_sensitivity.tex
+ [17]) (./discussion.tex [18]) (./main.bbl
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 Underfull \hbox (badness 1199) in paragraph at lines 54--60
 \T1/pcr/m/n/10.95 gov / pub / today / archive / archive _ 2015 / today15-[]11-[
 ]02 . html$\T1/pplx/m/n/10.95 , 02-11-2015.
@@ -177,5 +180,5 @@ share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist
 urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (20 pages, 5910679 bytes).
+Output written on main.pdf (20 pages, 5931067 bytes).
 Transcript written on main.log.
