@@ -11,11 +11,20 @@ Summaries of the configuration of the GENIE models are as follows:
     \centering
     \includegraphics[width=\textwidth]{images/model_summaries.pdf}
     \caption{A brief overview the features which make up the individual model configurations in GENIE. These models will eventually all be tuned.}
-    \label{fig:modelConfigs}
+    \label{tab:modelConfigs}
 \end{figure}
 
 
-The model used in the tuning addresses the observation of the abnormalities seen in recent experiments by incorporating the MEC interaction, Figure~\ref{fig:MECSchem} \cite{MEC} describes this interaction schematically in terms of the models involved. 
+Details on the first model to be tuned (G16\_01b) are as follows: 
+
+\begin{itemize}
+    \item Includes Empirical MEC
+    \item CCQE process is Llewellyn-Smith Model
+    \item Dipole Axial Form Factor - Depending on M\(_{A}\) = 0.99 GeV
+    \item Nuclear model: Fermi Gas Model - Bodek, Ritchie
+\end{itemize}
+
+this model takes the updated default GENIE model (G16\_01a) and additionally addresses the abnormalities seen in recent experiments by incorporating the MEC interaction, described schematically in terms of the theoretical models involved in Figure~\ref{fig:MECSchem} \cite{MEC}. 
 
 \begin{figure}[h!]
     \centering
@@ -23,6 +32,9 @@ The model used in the tuning addresses the observation of the abnormalities seen
     \caption{The models involved in the construction of the MEC model in neutrino event generation.}
     \label{fig:MECSchem}
 \end{figure}
+
+Datasets currently involved in the fit come from MiniBooNE, T2K and Minerva. 
+
 
 \begin{itemize}
     \item Publicly available datasets
