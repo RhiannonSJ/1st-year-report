@@ -150,36 +150,32 @@ Overfull \hbox (3.01889pt too wide) in paragraph at lines 121--123
 <images/model_summaries.pdf, id=275, 389.01141pt x 84.8201pt>
 <use images/model_summaries.pdf>
 <images/mec_model_genie.png, id=276, 259.01569pt x 185.0112pt>
-<use images/mec_model_genie.png>
+<use images/mec_model_genie.png> [14 <./images/model_summaries.pdf> <./images/m
+ec_model_genie.png>]
+<images/MB_Comp_numubar.pdf, id=322, 517.935pt x 595.15207pt>
+<use images/MB_Comp_numubar.pdf> [15 <./images/MB_Comp_numubar.pdf>] [16]
+<images/MB_numubar.pdf, id=1406, 589.1308pt x 228.42484pt>
+<use images/MB_numubar.pdf>
+<images/MB_numu.pdf, id=1407, 589.1308pt x 228.42484pt>
+<use images/MB_numu.pdf>
+<images/T2K_numu.pdf, id=1408, 589.1308pt x 228.42484pt>
+<use images/T2K_numu.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/MB_Comp_numubar.pdf, id=277, 517.935pt x 595.15207pt>
-<use images/MB_Comp_numubar.pdf>
+[17 <./images/MB_numubar.pdf> <./images/MB_numu.pdf
 
-LaTeX Warning: Reference `tab:ModelConfigs' on page 14 undefined on input line 
-47.
-
-
-LaTeX Warning: Reference `tab:ModelConfigs' on page 14 undefined on input line 
-47.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14 <./images/model_summaries.pdf>] [15 <./images/mec_model_genie.png>]
-[16 <./images/MB_Comp_numubar.pdf>]) (./cc0pi_xsec.tex [17])
-(./prospects_sensitivity.tex [18]) (./main.bbl
+pdfTeX warning: pdflatex (file ./images/MB_numu.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>] [18 <./images/T2K_numu.pdf>] [19]) (./cc0pi_xsec.tex [20])
+(./prospects_sensitivity.tex [21]) (./main.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 Underfull \hbox (badness 1199) in paragraph at lines 54--60
 \T1/pcr/m/n/10.95 gov / pub / today / archive / archive _ 2015 / today15-[]11-[
 ]02 . html$\T1/pplx/m/n/10.95 , 02-11-2015.
-) [19] (./main.aux)
+) [22] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
  )
 (see the transcript file for additional information){/usr/share/texlive/texmf-d
@@ -193,5 +189,5 @@ share/texmf/fonts/type1/public/tex-gyre/qplr.pfb></usr/share/texlive/texmf-dist
 urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (20 pages, 6079138 bytes).
+Output written on main.pdf (23 pages, 6962253 bytes).
 Transcript written on main.log.

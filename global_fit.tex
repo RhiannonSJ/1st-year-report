@@ -24,16 +24,14 @@ Details on the first model to be tuned (G16\_01b) are as follows:
     \item Nuclear model: Fermi Gas Model - Bodek, Ritchie
 \end{itemize}
 
-this model takes the updated default GENIE model (G16\_01a) and additionally addresses the abnormalities seen in recent experiments by incorporating the MEC interaction, described schematically in terms of the theoretical models involved in Figure~\ref{fig:MECSchem} \cite{MEC}. 
-
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.6\textwidth]{images/mec_model_genie.png}
+    \includegraphics[width=.5\textwidth]{images/mec_model_genie.png}
     \caption{The models involved in the construction of the MEC model in neutrino event generation.}
     \label{fig:MECSchem}
 \end{figure}
 
-Datasets currently involved in the fit come from MiniBooNE, T2K and Minerva. An example of a comparison between the MiniBooNE \(\bar{\nu}_{\mu}\) CCQE data set from 2013 and 4 different GENIE predictions is shown in Figure~\ref{fig:MBComp}.
+\clearpage
 
 \begin{figure}[h!]
     \centering
@@ -43,13 +41,48 @@ Datasets currently involved in the fit come from MiniBooNE, T2K and Minerva. An 
     \put(-120,430){\scriptsize G00\_00b}
     \put(-120,420){\scriptsize G16\_01a}
     \put(-120,410){\scriptsize G16\_02b}
-    \caption{An example comparison between 4 GENIE models (described briefly in Figure~\ref{tab:ModelConfigs}) and MiniBooNE \(\bar{\nu}_{\mu}\)CCQE data from 2013. The models fit the data with varying accuracies. It can be seen that even the closest fitting model is does not perfectly predict the trend seen in the data, therefore tuning is needed to fully optimise these fits.}
+    \caption{An example comparison between 4 GENIE models (described briefly in Figure~\ref{tab:modelConfigs}) and MiniBooNE \(\bar{\nu}_{\mu}\)CCQE data from 2013. The models fit the data with varying accuracies. It can be seen that even the closest fitting model is does not perfectly predict the trend seen in the data, therefore tuning is needed to fully optimise these fits.}
     \label{fig:MBComp}
 \end{figure}
 
-\begin{itemize}
-    \item Tensions
-\end{itemize}
+\clearpage
+
+This model takes the updated default GENIE model (G16\_01a) and additionally addresses the abnormalities seen in recent experiments by incorporating the MEC interaction, described schematically in terms of the theoretical models involved in Figure~\ref{fig:MECSchem} \cite{MEC}. 
+
+Datasets currently involved in the fit come from MiniBooNE, T2K and Minerva. An example of a comparison between the MiniBooNE \(\bar{\nu}_{\mu}\) CCQE data set from 2013 and 4 different GENIE predictions is shown in Figure~\ref{fig:MBComp}.
+
+Although the G16\_02b model is the most theoretically driven, it does not always provide the best fit to the data sets. For instance, in the MiniBooNE \(\nu\) CCQE data from 2010, the G16\_02b model fits better than both G00\_00a and G00\_00b, these fits are shown and quantified in Figure~\ref{fig:MBnu}. However, in the MiniBooNE \(\bar{\nu}\) CCQE data from 2013, Figure~\ref{fig:MBnubar} shows that the G00\_00b model had the best fit of the same three. Similarly in Figure~\ref{fig:T2Knu} which is the comparison between the same models for the T2K ND280 \(\nu\) CC0\(\pi\) data from 2015, the G00\_00a model fit best.
+
+\clearpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/MB_numubar.pdf}
+    \put(-183,156){ \( \partial ^2 \sigma / \partial \mbox{cos} \theta_{\mu} / \partial \mbox{T}_{\mu} \) [10\(^{-38}\)cm\(^{2}\)/GeV/n]}
+    \caption{ A comparison between the MiniBooNE \(\bar{\nu}\) CCQE 2010 data set and 3 of the GENIE model configurations, left: G00\_00a, middle: G00\_00b, right: G16\_02b. Taking the best fit to be the distribution with the lowest \(\chi^2\) / DoF, the G00\_00b model predicts the dataset best.}
+    \label{fig:MBnubar}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/MB_numu.pdf}
+    \put(-183,156){ \( \partial ^2 \sigma / \partial \mbox{cos} \theta_{\mu} / \partial \mbox{T}_{\mu} \) [10\(^{-38}\)cm\(^{2}\)/GeV/n]}
+    \caption{ A comparison between the MiniBooNE \(\nu\) CCQE 2013 data set and the same GENIE model configurations as in Figure~\ref{fig:MBnu}. The same best fit definition means the G16\_02b model predicts the dataset best.}
+    \label{fig:MBnu}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/T2K_numu.pdf}
+    \put(-183,156){ \( \partial ^2 \sigma / \partial \mbox{cos} \theta_{\mu} / \partial \mbox{P}_{\mu} \) [10\(^{-38}\)cm\(^{2}\)/GeV/n]}
+    \caption{ A comparison between the T2K \(\nu\) CC0\(\pi\) 2015 data set and the same GENIE model configurations as in Figures~\ref{fig:MBnu} and~\ref{fig:MBnubar}. The same best fit definition means the G00\_00a model predicts the dataset best.}
+    \label{fig:T2Knu}
+\end{figure}
+
+\clearpage
+
+Clearly, there are tensions between the datasets and no single theory best predicts all data. This tension will be a focal point when analysing the tuning results. 
+
 
 \subsection{Professor}
 
