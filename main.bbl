@@ -10,11 +10,6 @@ Y.~Fukuda et~al.
 \newblock {Evidence for oscillation of atmospheric neutrinos}.
 \newblock {\em Phys. Rev. Lett.}, 81:1562--1567, 1998.
 
-\bibitem{xsecCurr}
-J.~A. Formaggio and G.~P. Zeller.
-\newblock {From eV to EeV: Neutrino Cross Sections Across Energy Scales}.
-\newblock {\em Rev. Mod. Phys.}, 84:1307--1341, 2012.
-
 \bibitem{genie}
 Costas Andreopoulos, Christopher Barry, Steve Dytman, Hugh Gallagher, Tomasz
   Golan, Robert Hatcher, Gabriel Perdue, and Julia Yarba.
@@ -26,6 +21,11 @@ Andy Buckley, Hendrik Hoeth, Heiko Lacker, Holger Schulz, and Jan~Eike von
   Seggern.
 \newblock {Systematic event generator tuning for the LHC}.
 \newblock {\em Eur. Phys. J.}, C65:331--357, 2010.
+
+\bibitem{xsecCurr}
+J.~A. Formaggio and G.~P. Zeller.
+\newblock {From eV to EeV: Neutrino Cross Sections Across Energy Scales}.
+\newblock {\em Rev. Mod. Phys.}, 84:1307--1341, 2012.
 
 \bibitem{sbn}
 M.~Antonello et~al.
