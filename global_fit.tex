@@ -79,21 +79,23 @@ Although the G16\_02b model is the most theoretically driven, it does not always
     \label{fig:T2Knu}
 \end{figure}
 
-\clearpage
+%\clearpage
 
 Clearly, there are tensions between the datasets and no single theory best predicts all data. This tension will be a focal point when analysing the tuning results. 
 
 
 \subsection{Professor}
 
-\subsection{The fit}
-\begin{itemize}
-    \item Description of global fit
-    \begin{itemize}
-        \item How it works
-        \item Schematic
-    \end{itemize}
-\end{itemize}
+The Professor software framework parameterises the Monte Carlo event generator's response to parameter shifts on a bin-by-bin basis \cite{prof}. The tuning is done through fitting parameters within models to data sets and has the ability to incorporate multiple parameters within models as well as multiple data sets. Professor provides the opportunity to perform global tunings of theoretical models based on the extensive archive of neutrino scattering data which is publically available.
+
+The tuning is done in a subset of parameter space rather than on the full Monte Carlo, this space is defined by the x-axis in Figure~\ref{fig:profSchem} which is a schematic diagram of the fitting process. Only parameterising a sample of the Monte Carlo drastically reduces the computational expense of the process. The tuning is perfomed on multiple parameters in one go, and the nominal value for each is calculated using a \(\chi^2\) minimisation \cite{prof}. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/prof_schem.pdf}
+    \caption{A schematic of the Professor tuning method. Left: the parameter space is selected. Middle: The behaviour of each parameter in an individual bin is observed. Right: A parameter-dependent interpolation is constructed \( I(p) \) from the whole parameter space. The process is repeated for every bin. }
+    \label{fig:profSchem}
+\end{figure}
 
 \subsection{Results}
 \begin{itemize}
