@@ -1,4 +1,4 @@
-%Plan
+%Plan:
 
 \subsection{GENIE and the comparisons}
 GENIE applies theoretical physics models, composed of both physical and unphysical parameters, to detector geometries and materials to build experiment-specific neutrino interaction predictions \cite{genie}. The collaboration is in the process of improving configurations of these models for the purpose of optimising the accuracy of the predictions.
@@ -86,7 +86,7 @@ Clearly, there are tensions between the datasets and no single theory best predi
 
 \subsection{Professor}
 
-The Professor software framework parameterises the Monte Carlo event generator's response to parameter shifts on a bin-by-bin basis \cite{prof}. The tuning is done through fitting parameters within models to data sets and has the ability to incorporate multiple parameters within models as well as multiple data sets. Professor provides the opportunity to perform global tunings of theoretical models based on the extensive archive of neutrino scattering data which is publically available.
+The Professor software framework parameterises the Monte Carlo event generator's response to parameter shifts on a bin-by-bin basis \cite{prof}. The tuning is done through fitting parameters within models to data and has the ability to incorporate multiple parameters within models as well as fitting together multiple data sets. Professor therefore provides the opportunity to perform global tunings of theoretical models based on the extensive archive of neutrino scattering data which is publically available.
 
 The tuning is done in a subset of parameter space rather than on the full Monte Carlo, this space is defined by the x-axis in Figure~\ref{fig:profSchem} which is a schematic diagram of the fitting process. Only parameterising a sample of the Monte Carlo drastically reduces the computational expense of the process. The tuning is perfomed on multiple parameters in one go, and the nominal value for each is calculated using a \(\chi^2\) minimisation \cite{prof}. 
 
@@ -98,10 +98,41 @@ The tuning is done in a subset of parameter space rather than on the full Monte 
 \end{figure}
 
 \subsection{Results}
-\begin{itemize}
-    \item Results 
-\end{itemize}
 
+To date, the fit has been performed on 6 parameters within the G16\_01b model, the results of which are given in Figure~\ref{fig:paramRes} alongside the nominal - most physical - value for each. 
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/param_fit_results.pdf}
+    \caption{Parameter fit results.}
+    \label{fig:paramRes}
+\end{figure}
+
+Towards the global fit, the G16\_01b model was also tuned separetely to 5 sets of data: MiniBooNE CCQE \(\nu_{\mu}\), MiniBooNE CCQE \(\bar{\nu}_{\mu}\), Minerva CCQE \(\nu_{\mu}\), Mineva CCQE \(\bar{\nu}_{\mu}\) and T2K CC 0\(\pi\). The results of the individual and global fits are given in Figure~\ref{fig:exRes} 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/exp_fit_results.pdf}
+    \caption{Experiment fit results.}
+    \label{fig:exRes}
+\end{figure}
+
+Graphical slices of the experimental results for MiniBooNE \(\nu_{\mu}\), Minerva \(\nu_{\mu}\) and T2K are shown in Figure~\ref{fig:globRes} in order to visually demonstrate the comparison between the model before and after tuning on each data set.  
+
+\begin{figure}[h!]
+    \begin{picture}(436,436)
+        \centering
+        \includegraphics[width=\textwidth]{images/fit_results.pdf}
+        \put(-415,275){\rotatebox{90}{\small \( \partial^{2} \sigma \)/\( \partial \)T\(_{\mu}\)/\( \partial \)cos\(\theta_{\mu}\) [10\(^{-38}\) cm\(^{2}\)/GeV/n] }}
+        \put(-210,306){\rotatebox{90}{\small d\(\sigma\)/dQ\(^{2}\) [10\(^{-38}\) cm\(^{2}\)/GeV\(^{2}\)/n] }}
+        \put(-350,105){\rotatebox{90}{\small \(\partial^{2} \sigma \)/\(\partial\)P\(_{\mu}\)/\(\partial\) cos\(\theta_{\mu}\) }}
+        \put(-335,95){\rotatebox{90}{\small [10\(^{-38}\) cm\(^{2}\)/GeV/n] }}
+        \put(-280,240){ T\(_{\mu}\) [GeV]}
+        \put(-60,240){ Q\(^{2}\) [GeV\(^{2}\)]}
+        \put(-150,45){ P\(_{\mu}\) [GeV]}
+    \end{picture}
+    \caption{Global fit results.}
+    \label{fig:globRes}
+\end{figure}
 
 \clearpage
